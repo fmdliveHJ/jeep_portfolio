@@ -1,0 +1,524 @@
+.Jeeplife {
+	.container {
+		.visual {
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			background-color: #111;
+
+			&::after {
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: '';
+				display: block;
+				background: url(../../../public/img/jeeplife/history.jpg) no-repeat center/cover;
+				width: 100%;
+				height: 100%;
+				z-index: 0;
+				opacity: 0.5;
+			}
+
+			.text_box {
+				position: relative;
+				z-index: 1;
+				max-width: 50vw;
+
+				h2 {
+					color: #fff;
+					font-size: $fontXXXXL;
+					text-align: center;
+				}
+
+				p {
+					margin-top: 30px;
+					color: #fff;
+					line-height: 1.5;
+				}
+			}
+		}
+
+		.inner {
+			.partner {
+				margin-bottom: 100px;
+
+				&::after {
+					content: '';
+					display: block;
+					clear: both;
+				}
+
+				.box {
+					position: relative;
+					width: 100%;
+					height: 700px;
+
+					&::after {
+						content: '';
+						display: block;
+						clear: both;
+					}
+
+					.text_box {
+						padding: 20px;
+
+						h4 {
+							font-family: 'Roboto';
+							font-size: $fontXL;
+							margin-bottom: 20px;
+						}
+
+						p {
+							font-size: $fontL;
+							line-height: 1.5;
+						}
+					}
+
+					.pic {
+						width: 100%;
+						height: 100%;
+					}
+
+					&.left {
+						width: 30%;
+
+						.text_box {
+							padding: 30px;
+							background: #fff;
+							position: absolute;
+							bottom: 0;
+							left: 0;
+						}
+
+					}
+
+					&.right {
+						width: calc(70% - 20px);
+
+						.con1 {
+							float: left;
+							width: 50%;
+							height: calc(50% - 10px);
+
+						}
+
+						.con2 {
+							float: left;
+							width: 50%;
+							height: calc(50% - 10px);
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							flex-wrap: wrap;
+							padding: 50px;
+							box-sizing: border-box;
+							background: #fff;
+
+						}
+
+					}
+
+					.con3 {
+						position: absolute;
+						bottom: 0;
+						right: 0;
+						width: 100%;
+						height: 49%;
+						margin-top: 20px;
+
+					}
+				}
+			}
+		}
+
+		.members {
+			background: $pointColor;
+			margin-bottom: 200px;
+
+			.wrap {
+				.text_box {
+					background: #000;
+					height: auto;
+					width: 30%;
+					padding: 30px;
+					position: relative;
+					top: 40px;
+
+					h3 {
+						width: 238px;
+						height: 92px;
+						background: url(../../../public/img/jeeplife/members_logo.jpg) no-repeat center/cover;
+					}
+
+					p {
+						color: #fff;
+						line-height: 1.5;
+					}
+				}
+
+				video {
+					position: absolute;
+					bottom: -100px;
+					right: 0;
+					width: 60%;
+				}
+			}
+		}
+
+		.history {
+
+			article {
+				width: 100%;
+
+
+				display: flex;
+
+				&::after {
+					content: '';
+					display: block;
+					clear: both;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				&:nth-child(2n) {
+					flex-direction: row-reverse;
+
+					.text_box {
+						justify-content: end;
+						align-items: start;
+						text-align: left;
+
+						h3 {
+							left: 30px;
+							right: auto;
+						}
+
+						p {
+							text-align: left;
+						}
+					}
+				}
+
+				.text_box {
+					width: 50%;
+					text-align: center;
+					position: relative;
+					padding: 20px 30px;
+					display: flex;
+					justify-content: end;
+					align-items: end;
+					flex-wrap: wrap;
+					flex-direction: column;
+					text-align: right;
+
+					h3 {
+						position: absolute;
+						right: 0;
+						top: 0;
+						font-weight: bold;
+						font-size: $fontBig;
+						color: rgba(0, 0, 0, 0.5);
+						opacity: 0.1;
+						transition: 0.5s;
+
+					}
+
+					p {
+						font-size: $fontXXXL;
+						font-family: 'Noto Sans';
+						font-weight: 700;
+						color: #111;
+						transition: 0.5s;
+						width: 70%;
+						text-align: right;
+						margin-bottom: 50px;
+						line-height: 1.2;
+
+
+					}
+
+					span {
+						width: 70%;
+						line-height: 2;
+					}
+				}
+
+				.pic {
+					width: 50%;
+					height: 500px;
+					background: #000;
+					transition: 0.5s;
+					overflow: hidden;
+
+					img {
+						transition: 0.5s;
+					}
+				}
+
+
+			}
+		}
+	}
+
+	//inner
+}
+
+
+@media screen and (max-width: $tablet) {
+	.Jeeplife {
+		.container {
+			.visual {
+				.text_box {
+					max-width: 50vw;
+
+					h2 {
+						font-size: $fontXXXL;
+					}
+				}
+			}
+
+			.inner {
+				.partner {
+					margin-bottom: 50px;
+
+					.box {
+						position: relative;
+						width: 100%;
+						height: 700px;
+
+						&.left {
+							width: 100%;
+							height: 400px;
+
+							.text_box {
+								padding: 20px;
+							}
+						}
+
+						&.right {
+							margin-top: 20px;
+							width: 100%;
+							height: auto;
+
+							.con1 {
+								height: 300px;
+							}
+
+							.con2 {
+								height: 300px;
+								padding: 20px;
+							}
+						}
+
+						.con3 {
+							position: relative;
+							float: left;
+							height: auto;
+							margin-top: 20px;
+
+						}
+					}
+				}
+			}
+
+			.members {
+				background: $pointColor;
+				margin-bottom: 200px;
+
+				.wrap {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+
+					.text_box {
+						background: #000;
+						height: auto;
+						width: 80%;
+						padding: 30px;
+						position: relative;
+						top: auto;
+
+						h3 {
+							width: 238px;
+							height: 92px;
+							background: url(../../../public/img/jeeplife/members_logo.jpg) no-repeat center/cover;
+						}
+					}
+
+					video {
+						position: relative;
+						bottom: -50px;
+						width: 80%;
+					}
+				}
+			}
+
+			.history {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+
+				article {
+					width: 100%;
+					flex-direction: row;
+					justify-content: end;
+					align-items: start;
+					text-align: left;
+					margin-top: 30px;
+
+					&:nth-child(2n) {
+						justify-content: start;
+
+						.text_box {
+							text-align: right;
+							align-items: end;
+
+						}
+					}
+
+					.text_box {
+						width: 100%;
+
+						h3 {
+							right: auto;
+							left: 0;
+						}
+
+						p {
+							width: 100%;
+						}
+
+						span {
+							width: 100%;
+						}
+
+					}
+
+					.pic {
+						width: 100%;
+						height: 300px;
+
+					}
+
+
+				}
+			}
+		}
+	}
+
+}
+
+//tablet
+
+@media screen and (max-width: $mini) {
+	.Jeeplife {
+		.container {
+
+			.inner {
+				.partner {
+					.box {
+
+						&.right {
+
+							.con1 {
+								width: 100%;
+								height: 200px;
+
+							}
+
+							.con2 {
+								width: 100%;
+								height: 200px;
+							}
+						}
+					}
+				}
+			}
+
+			.history {
+
+				article {
+					width: 100%;
+					flex-direction: column;
+					flex-direction: column;
+
+					&:nth-child(2n) {
+						justify-content: start;
+						flex-direction: column;
+
+						.text_box {
+							text-align: right;
+							align-items: end;
+							text-align: right;
+
+							p {
+								text-align: right;
+							}
+
+						}
+					}
+
+					.text_box {
+						h3 {
+							font-size: $fontXXXXL;
+						}
+
+						span {
+							width: 100%;
+						}
+
+						p {
+							font-size: $fontXL
+						}
+
+						span {
+							font-size: $fontL;
+							line-height: 1.4;
+
+						}
+
+					}
+
+					.pic {
+						width: 100%;
+						height: 300px;
+
+					}
+
+
+				}
+			}
+		}
+	}
+}
+
+//mobile
+
+
+
+@media screen and (max-width: $mobile) {
+	.Jeeplife {
+		.container {
+			.visual {
+				.text_box {
+					max-width: 80vw;
+
+					h2 {
+						font-size: $fontXXXL
+					}
+				}
+			}
+		}
+	}
+}
+
+//mobile
+

@@ -1,0 +1,314 @@
+.Join {
+  .container {
+    padding: 0;
+
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    .visual {
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      position: relative;
+      background-color: #111;
+
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        display: block;
+        background: url(../../../public/img/join/visual.jpg) no-repeat center/cover;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        opacity: 0.5;
+      }
+
+      .inner {
+        max-width: 1450px;
+        width: 100%;
+      }
+
+      .text_box {
+        width: 500px;
+
+        position: relative;
+        z-index: 1;
+        max-width: 50vw;
+
+        h2 {
+          color: #fff;
+          font-size: $fontXXXXL;
+          text-align: center;
+        }
+
+        p {
+          margin-top: 30px;
+          color: #fff;
+          line-height: 1.5;
+        }
+      }
+    }
+
+    .inner {
+      margin: 0 auto;
+      display: flex;
+
+      .left_box {
+        width: 40%;
+        height: calc(100% - 144px);
+        padding: 30px 50px 0 0;
+        box-sizing: border-box;
+
+        h2 {
+          font-size: $fontXXXL;
+          line-height: 1.2;
+          margin-bottom: 50px;
+        }
+
+        ul {
+          margin-top: 30px;
+
+          li {
+            margin-bottom: 20px;
+
+            h3 {
+              font-size: $fontL;
+              margin-bottom: 5px;
+            }
+
+            p {
+              font-size: $fontM;
+              color: #aaa;
+            }
+          }
+        }
+      }
+
+      .form_box {
+        position: relative;
+        top: -146px;
+        float: right;
+        width: 60%;
+        background: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+
+        .top_box {
+          display: flex;
+          background: #f4f4f6;
+          padding: 40px;
+          box-sizing: border-box;
+          justify-content: center;
+          align-items: center;
+
+          .pic {
+            margin-right: 20px;
+
+            img {
+              object-fit: contain;
+            }
+          }
+
+          p {
+            font-weight: 500;
+            font-size: $fontXL;
+          }
+        }
+
+
+        table {
+          padding: 50px 0;
+          border: none;
+          width: 100%;
+
+          input[type='reset'],
+          input[type='submit'] {
+            border: none;
+            width: 150px;
+            height: 50px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px 10px;
+            cursor: pointer;
+            font-weight: 700;
+            background: #f4f4f6;
+            color: #111;
+            transition: 0.5s;
+
+            &:hover {
+              background: $pointColor;
+            }
+          }
+
+          tr {
+            &:last-child {
+              th {
+                text-align: center;
+              }
+            }
+          }
+
+          th {
+            font-size: $fontXL;
+            text-align: left;
+            padding: 10px 30px 0;
+          }
+
+          td {
+            border: none;
+            padding: 15px 30px;
+
+            input[type='text'],
+            input[type='password'],
+            select,
+            textarea {
+              width: 100%;
+              border: none;
+              padding: 15px 10px;
+              resize: none;
+              background: #f4f4f6
+            }
+
+            label {
+              position: absolute;
+              top: -9999px;
+              left: -9999px;
+            }
+            .err {
+              font-size: $fontS;
+              color: $pointColor;
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .Join {
+    .container {
+      .visual {
+        .inner {
+          .text_box {
+
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            max-width: 80vw;
+          }
+        }
+      }
+
+      .inner {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        .left_box {
+          width: 100%;
+          height: auto;
+          padding: 0;
+          box-sizing: border-box;
+
+          h2 {
+            font-size: $fontXXL;
+            margin-bottom: 10px;
+          }
+
+        }
+
+        .form_box {
+          margin-bottom: 50px;
+          top: 0;
+          width: 100%;
+
+          .top_box {
+            padding: 20px;
+
+            p {
+              font-size: $fontL;
+            }
+          }
+
+          table {
+            padding: 0 0 20px;
+
+            th {
+              font-size: $fontXL;
+              text-align: left;
+              padding: 10px 30px 0;
+            }
+
+            td {
+              padding: 10px;
+
+              .err {
+                font-size: $fontS;
+                color: $pointColor;
+                margin-left: 10px;
+                }
+                }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .Join {
+    .container {
+      .inner {
+        .form_box {
+          .top_box {
+            p {
+              font-size: $fontM;
+            }
+          }
+
+          table {
+            display: block;
+            width: 100%;
+
+            tbody {
+              display: block;
+
+              tr {
+                display: block;
+                width: 100%;
+              }
+              th {
+                display: block;
+                input[type='reset'],
+                input[type='submit'] {
+                  width: 48%;
+                  margin: 0 1%;
+                }
+                }
+
+              td {
+              display: block;
+              width: 100%;
+              input {
+                width: 100%;
+              }
+              }
+          }
+          }
+          }
+
+      }
+    }
+  }
+}

@@ -1,0 +1,238 @@
+.Community {
+  .container {
+    .visual {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      background-color: #111;
+
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        display: block;
+        background: url(../../../public/img/community/visual.jpg) no-repeat center/cover;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        opacity: 0.5;
+      }
+
+      .text_box {
+        position: relative;
+        z-index: 1;
+        max-width: 50vw;
+
+        h2 {
+          color: #fff;
+          font-size: $fontXXXXL;
+          text-align: center;
+        }
+
+        p {
+          margin-top: 30px;
+          color: #fff;
+          line-height: 1.5;
+        }
+      }
+    }
+
+    .inner {
+      display: flex;
+      margin: 0 auto;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      width: 100%;
+      max-width: 1450px;
+      align-items: flex-start;
+
+      .inputBox {
+
+        width: 40%;
+        padding: 30px;
+        box-sizing: border-box;
+        position: relative;
+        top: -100px;
+        background: #fff;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+        .top_box {
+          margin-bottom: 50px;
+          padding: 20px;
+          }
+
+        input[type='text'],
+        textarea {
+          width: 100%;
+          padding: 8px 10px;
+          border: none;
+          background: #f4f4f6;
+          margin-bottom: 20px;
+          font-family: 'Noto Sans';
+          }
+
+        textarea {
+          height: 300px;
+        }
+
+        .btnSet {
+          text-align: center;
+
+          button {
+            width: 150px;
+            height: 30px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            background: $bgColor;
+            color: #fff;
+            cursor: pointer;
+            margin-right: 20px;
+            }
+            }
+            }
+
+      .showBox {
+        width: 50%;
+        margin-top: 50px;
+        border-top: 3px solid $bgColor;
+
+        article {
+          position: relative;
+          padding: 15px 30px;
+          border-bottom: 1px solid $bgColor;
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          justify-content: space-between;
+
+          .btnSet {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            width: 20%;
+
+            button {
+              margin: 0 2px;
+              border: 0;
+              background: transparent;
+              width: 20px;
+              height: 20px;
+              cursor: pointer;
+
+
+              svg {
+                width: 100%;
+                height: 100%;
+              }
+              }
+
+            }
+
+          .txt {
+            display: flex;
+            justify-content: start;
+            width: 80%;
+            flex-direction: column;
+            p {
+              height: 0;
+              overflow: hidden;
+            }
+          }
+
+          .editTxt {
+            width: 100%;
+            transition: 0.5s;
+            margin-bottom:30px;
+
+            input[type='text'],
+            textarea {
+              width: 100%;
+              padding: 8px 10px;
+              border: none;
+              margin-bottom: 20px;
+              font-family: 'Noto Sans';
+            }
+
+            }
+
+            .editTxt+.btnSet {
+              position: absolute;
+              bottom: 30px;
+              right: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $tablet) {
+  .Community {
+    .container {
+
+
+      .inner {
+        flex-direction: column;
+
+        h2 {
+          margin: 0;
+        }
+
+        .inputBox {
+          width: 100%;
+          top: -50px;
+
+          textarea {
+            height: 200px;
+          }
+        }
+
+        .showBox {
+          width: 100%;
+        }
+      }
+
+    }
+  }
+}
+@media screen and (max-width: $mobile) {
+  .Community {
+    .container {
+      .visual {
+        .text_box {
+          max-width: 80vw;
+
+          h2 {
+            font-size: $fontXXXL
+          }
+        }
+      }
+
+      .inner {
+        .inputBox {
+          .top_box {
+            margin-bottom: 20px;
+            padding: 0;
+
+            p {
+              text-align: center;
+            }
+          }
+
+          .btnSet {
+            button {
+              width: 50%;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

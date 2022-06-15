@@ -1,0 +1,1510 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&family=Noto+Sans:wght@500;700&family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #efefef;
+  font-family: 'Noto Sans';
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+fieldset {
+  border: none;
+}
+
+legend,
+caption {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+textarea {
+  resize: none;
+}
+
+.visual {
+  min-height: 500px;
+}
+
+.content .container {
+  padding-bottom: 80px;
+}
+
+.content .container > .inner {
+  width: 1450px;
+  margin: 100px auto 0;
+  position: relative;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 1s;
+}
+
+.content .container > .inner::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.content .container > .inner > h2 {
+  font-size: 4rem;
+  font-family: 'Roboto';
+  color: #333;
+  margin-bottom: 100px;
+  opacity: 0;
+  transition: 0.5s 1s;
+  transform: translateX(-100px);
+}
+
+.content .container > .inner > h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #ffba00;
+  margin-top: 20px;
+}
+
+.content .container h3 {
+  font-family: 'Roboto';
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.content .container .wrap {
+  width: 1450px;
+  min-height: 500px;
+  position: relative;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.content.on .container > .inner {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.content.on .container > .inner h2 {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+@media screen and (max-width: 1179px) {
+  .content figure {
+    height: 180px;
+  }
+  .content > .inner {
+    width: 100%;
+    margin: 80px auto;
+    padding: 0px 30px;
+  }
+}
+
+@media screen and (max-width: 539px) {
+  .content figure {
+    height: 130px;
+  }
+}
+
+header {
+  width: 100%;
+  background: #fff;
+  z-index: 1;
+  position: relative;
+  background: #2e2c2c;
+}
+
+header .inner {
+  width: 1180px;
+  height: 80px;
+  margin: 0px auto;
+  position: relative;
+}
+
+header .inner h1 {
+  text-indent: -9999px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0px;
+  width: 90px;
+  height: 36px;
+  background: url(../../../public/img/common/logo_jeep.png) no-repeat center/contain;
+}
+
+header .inner h1 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  font-family: 'Roboto';
+  color: #fff;
+}
+
+header .inner #gnb {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0px;
+}
+
+header .inner #gnb li {
+  float: left;
+}
+
+header .inner #gnb li a {
+  display: inline-block;
+  padding: 20px 30px;
+  font-size: 0.875rem;
+  font-family: 'Roboto';
+  color: #fff;
+  font-weight: bold;
+}
+
+header .inner .fa-bars {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  font-size: 1.5rem;
+  color: #555;
+  display: none;
+}
+
+header.main {
+  background: transparent;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+}
+
+header.main .inner h1 a {
+  color: #fff;
+}
+
+header.main .inner #gnb li a {
+  color: #eee;
+}
+
+header.main .inner .fa-bars {
+  color: #fff;
+}
+
+@media screen and (max-width: 1179px) {
+  header .inner {
+    width: 100%;
+  }
+  header .inner h1 {
+    left: 30px;
+  }
+  header .inner #gnb {
+    display: none;
+  }
+  header .inner .fa-bars {
+    display: block;
+  }
+}
+
+footer {
+  width: 100%;
+  border-top: 1px solid #bbb;
+  background: #2e2c2c;
+}
+
+footer .inner {
+  display: flex;
+  justify-content: space-between;
+  width: 1450px;
+  margin: 0px auto;
+  position: relative;
+  padding: 50px;
+}
+
+footer .inner > div {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+footer .inner > div ul {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+footer .inner > div ul li {
+  margin: 0 30px;
+}
+
+footer .inner > div ul li a {
+  color: #fff;
+}
+
+footer .inner h1 {
+  text-indent: -9999px;
+  width: 174px;
+  height: 70px;
+  background: url(../../../public/img/common/footer_logo.png) no-repeat center/contain;
+}
+
+footer .inner p {
+  color: #fff;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 1179px) {
+  footer .inner {
+    width: 100%;
+    padding: 50px 30px;
+  }
+}
+
+.pop {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 5vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.pop .con {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.pop .con video,
+.pop .con iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pop .con img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.pop .con .close {
+  position: absolute;
+  font-size: 0.875rem;
+  color: orange;
+  font-family: 'Roboto';
+  top: -40px;
+  right: 0;
+  cursor: pointer;
+}
+
+#visual {
+  width: 100%;
+  height: 100vh;
+  font-size: 10vw;
+  position: relative;
+  overflow: hidden;
+}
+
+#visual .swiper {
+  height: 100%;
+}
+
+#visual .swiper .swiper-slide {
+  width: 100%;
+  background: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#news {
+  width: 100%;
+  height: 100vh;
+  background: lightcyan;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  font-size: 10vw;
+  padding: 5vw;
+  perspective: 600px;
+}
+
+#news article {
+  width: 15%;
+  min-height: 180px;
+  border: 1px solid #888;
+  padding: 20px;
+  margin: 10px;
+  transform: translateY(100px) rotateY(180deg);
+  opacity: 0;
+  transition-duration: 0.5s;
+}
+
+#news article:nth-of-type(1) {
+  transition-delay: 0s;
+}
+
+#news article:nth-of-type(2) {
+  transition-delay: 0.2s;
+}
+
+#news article:nth-of-type(3) {
+  transition-delay: 0.4s;
+}
+
+#news article:nth-of-type(4) {
+  transition-delay: 0.6s;
+}
+
+#news article h2 {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+#news article p {
+  font-size: 0.875rem;
+  color: #777;
+}
+
+#news.on article {
+  transform: translateY(0px) rotateY(0deg);
+  opacity: 1;
+}
+
+#pic {
+  width: 100%;
+  height: 100vh;
+  background: lightgoldenrodyellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10vw;
+  position: relative;
+  overflow: hidden;
+}
+
+#pic p {
+  font: bold 200px/1 'arial';
+  color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
+#vids {
+  width: 100%;
+  height: 100vh;
+  background: lightsteelblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10vw;
+}
+
+.scroll_navi {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 50px;
+}
+
+.scroll_navi li {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #111;
+  background: #fff;
+  margin: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.scroll_navi li.on {
+  height: 100px;
+  background: #111;
+  border: 1px solid #bbb;
+}
+
+.Jeeplife .container .visual {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #111;
+}
+
+.Jeeplife .container .visual::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  display: block;
+  background: url(../../../public/img/jeeplife/history.jpg) no-repeat center/cover;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.Jeeplife .container .visual .text_box {
+  position: relative;
+  z-index: 1;
+  max-width: 50vw;
+}
+
+.Jeeplife .container .visual .text_box h2 {
+  color: #fff;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.Jeeplife .container .visual .text_box p {
+  margin-top: 30px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.Jeeplife .container .inner .partner {
+  margin-bottom: 100px;
+}
+
+.Jeeplife .container .inner .partner::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.Jeeplife .container .inner .partner .box {
+  position: relative;
+  width: 100%;
+  height: 700px;
+}
+
+.Jeeplife .container .inner .partner .box::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.Jeeplife .container .inner .partner .box .text_box {
+  padding: 20px;
+}
+
+.Jeeplife .container .inner .partner .box .text_box h4 {
+  font-family: 'Roboto';
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.Jeeplife .container .inner .partner .box .text_box p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.Jeeplife .container .inner .partner .box .pic {
+  width: 100%;
+  height: 100%;
+}
+
+.Jeeplife .container .inner .partner .box.left {
+  width: 30%;
+}
+
+.Jeeplife .container .inner .partner .box.left .text_box {
+  padding: 30px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.Jeeplife .container .inner .partner .box.right {
+  width: calc(70% - 20px);
+}
+
+.Jeeplife .container .inner .partner .box.right .con1 {
+  float: left;
+  width: 50%;
+  height: calc(50% - 10px);
+}
+
+.Jeeplife .container .inner .partner .box.right .con2 {
+  float: left;
+  width: 50%;
+  height: calc(50% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.Jeeplife .container .inner .partner .box .con3 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 49%;
+  margin-top: 20px;
+}
+
+.Jeeplife .container .members {
+  background: #ffba00;
+  margin-bottom: 200px;
+}
+
+.Jeeplife .container .members .wrap .text_box {
+  background: #000;
+  height: auto;
+  width: 30%;
+  padding: 30px;
+  position: relative;
+  top: 115px;
+}
+
+.Jeeplife .container .members .wrap .text_box h3 {
+  width: 238px;
+  height: 92px;
+  background: url(../../../public/img/jeeplife/members_logo.jpg) no-repeat center/cover;
+}
+
+.Jeeplife .container .members .wrap .text_box p {
+  color: #fff;
+  line-height: 1.5;
+}
+
+.Jeeplife .container .members .wrap video {
+  position: absolute;
+  bottom: -100px;
+  right: 0;
+  width: 60%;
+}
+
+.Jeeplife .container .history .wrap article {
+  width: 100%;
+  display: flex;
+}
+
+.Jeeplife .container .history .wrap article::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.Jeeplife .container .history .wrap article:last-child {
+  margin-bottom: 0;
+}
+
+.Jeeplife .container .history .wrap article:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+.Jeeplife .container .history .wrap article:nth-child(2n) .text_box {
+  justify-content: end;
+  align-items: start;
+  text-align: left;
+}
+
+.Jeeplife .container .history .wrap article:nth-child(2n) .text_box h3 {
+  left: 30px;
+  right: auto;
+}
+
+.Jeeplife .container .history .wrap article:nth-child(2n) .text_box p {
+  text-align: left;
+}
+
+.Jeeplife .container .history .wrap article .text_box {
+  width: 50%;
+  text-align: center;
+  position: relative;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: right;
+}
+
+.Jeeplife .container .history .wrap article .text_box h3 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-weight: bold;
+  font-size: 7rem;
+  color: rgba(0, 0, 0, 0.5);
+  opacity: 0.1;
+  transition: 0.5s;
+}
+
+.Jeeplife .container .history .wrap article .text_box p {
+  font-size: 3rem;
+  font-family: 'Noto Sans';
+  font-weight: 700;
+  color: #111;
+  transition: 0.5s;
+  width: 70%;
+  text-align: right;
+  margin-bottom: 50px;
+  line-height: 1.2;
+}
+
+.Jeeplife .container .history .wrap article .text_box span {
+  width: 70%;
+  line-height: 2;
+}
+
+.Jeeplife .container .history .wrap article .pic {
+  width: 50%;
+  height: 500px;
+  background: #000;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.Jeeplife .container .history .wrap article .pic img {
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 1179px) {
+  .Jeeplife .inner .wrap article .inner:hover .pic {
+    height: 300px;
+  }
+  .Jeeplife .inner .wrap article .inner:hover .pic img {
+    transform: scale(1.2);
+  }
+}
+
+.Community .container .visual {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #111;
+}
+
+.Community .container .visual::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  display: block;
+  background: url(../../../public/img/community/visual.jpg) no-repeat center/cover;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.Community .container .visual .text_box {
+  position: relative;
+  z-index: 1;
+  max-width: 50vw;
+}
+
+.Community .container .visual .text_box h2 {
+  color: #fff;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.Community .container .visual .text_box p {
+  margin-top: 30px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.Community .container .inner {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  width: 100%;
+  max-width: 1450px;
+  align-items: flex-start;
+}
+
+.Community .container .inner .inputBox {
+  width: 40%;
+  padding: 30px;
+  box-sizing: border-box;
+  position: relative;
+  top: -100px;
+  background: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.Community .container .inner .inputBox .top_box {
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+.Community .container .inner .inputBox input[type='text'],
+.Community .container .inner .inputBox textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  background: #f4f4f6;
+  margin-bottom: 20px;
+  font-family: 'Noto Sans';
+}
+
+.Community .container .inner .inputBox textarea {
+  height: 300px;
+}
+
+.Community .container .inner .inputBox .btnSet {
+  text-align: center;
+}
+
+.Community .container .inner .inputBox .btnSet button {
+  width: 150px;
+  height: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: #2e2c2c;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.Community .container .inner .showBox {
+  width: 50%;
+  margin-top: 50px;
+  border-top: 3px solid #2e2c2c;
+}
+
+.Community .container .inner .showBox article {
+  position: relative;
+  padding: 15px 30px;
+  border-bottom: 1px solid #2e2c2c;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Community .container .inner .showBox article .btnSet {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 20%;
+}
+
+.Community .container .inner .showBox article .btnSet button {
+  margin: 0 2px;
+  border: 0;
+  background: transparent;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.Community .container .inner .showBox article .btnSet button svg {
+  width: 100%;
+  height: 100%;
+}
+
+.Community .container .inner .showBox article .txt {
+  display: flex;
+  justify-content: start;
+  width: 80%;
+  flex-direction: column;
+}
+
+.Community .container .inner .showBox article .txt p {
+  height: 0;
+  overflow: hidden;
+}
+
+.Community .container .inner .showBox article .editTxt {
+  width: 100%;
+  transition: 0.5s;
+  margin-bottom: 30px;
+}
+
+.Community .container .inner .showBox article .editTxt input[type='text'],
+.Community .container .inner .showBox article .editTxt textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  margin-bottom: 20px;
+  font-family: 'Noto Sans';
+}
+
+.Community .container .inner .showBox article .editTxt + .btnSet {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+.Media .story {
+  height: 700px;
+  margin-bottom: 100px;
+}
+
+.Media .story .left {
+  background: #be2237;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Media .story .left .pic {
+  width: 100%;
+  padding: 50px 100px;
+  box-sizing: border-box;
+}
+
+.Media .story .left .pic img {
+  border: 3px solid #fff;
+}
+
+.Media .story .left p {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.Media .story .left span {
+  display: block;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.Media .story .right {
+  width: 50%;
+  height: 100%;
+  background: url(../../../public/img/media/story02.jpg) no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+.Media .story .right .pic {
+  width: 100%;
+}
+
+.Media .youtube_box {
+  margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.Media .youtube_box article {
+  width: 33.3333%;
+  padding: 20px 0px;
+  transition: 0.5s;
+}
+
+.Media .youtube_box article .text_box {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  padding: 0 20px;
+}
+
+.Media .youtube_box article .text_box h3 {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: 'work sans';
+  color: #777;
+  text-align: center;
+  width: 100%;
+}
+
+.Media .youtube_box article .text_box p {
+  font-size: 0.875rem;
+  line-height: 1.2;
+  font-family: 'Roboto';
+  color: #999;
+  filter: saturate(0);
+}
+
+.Media .youtube_box article .pic {
+  cursor: pointer;
+  width: 90%;
+  margin: 0 auto;
+  height: 195px;
+  background: #000;
+  transition: 0.5s;
+}
+
+.Media .magazine .top_box {
+  position: relative;
+  width: 100%;
+  height: 700px;
+}
+
+.Media .magazine .top_box:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.Media .magazine .top_box .pic {
+  float: left;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.Media .magazine .top_box .pic.con1 {
+  width: 40%;
+  height: 100%;
+}
+
+.Media .magazine .top_box .pic.con2 {
+  width: 60%;
+  height: 50%;
+}
+
+.Media .magazine .top_box .pic.con3 {
+  width: 60%;
+  height: 50%;
+}
+
+.Media .magazine .bottom_box {
+  position: relative;
+  width: 100%;
+  height: 350px;
+}
+
+.Media .magazine .bottom_box:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.Media .magazine .bottom_box .pic {
+  float: left;
+  width: 33.3333%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1179px) {
+  .Media article h3 {
+    width: 47%;
+  }
+  .Media article .txt {
+    width: 50%;
+  }
+  .Media article .pic {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (max-width: 539px) {
+  .Youtube article h3 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .Youtube article .txt {
+    width: 100%;
+  }
+  .Youtube article .pic {
+    margin-top: 40px;
+    margin-bottom: 0px;
+    height: 120px;
+  }
+}
+
+.frame {
+  transition: transform 2s, opacity 2s;
+  transform: translateY(200px);
+  opacity: 0;
+}
+
+.frame.on {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.frame::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.frame article {
+  width: 20%;
+  padding: 10px;
+  float: left;
+}
+
+.frame article .inner {
+  width: 100%;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.frame article .inner .pic {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.frame article .inner .pic img {
+  width: 100%;
+}
+
+.frame article .inner h2 {
+  font: normal 14px/1.2 'open sans';
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.Location .container .visual {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #111;
+}
+
+.Location .container .visual::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  display: block;
+  background: url(../../../public/img/location/visual.jpg) no-repeat center/cover;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.Location .container .visual .text_box {
+  position: relative;
+  z-index: 1;
+  max-width: 50vw;
+}
+
+.Location .container .visual .text_box h2 {
+  color: #fff;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.Location .container .visual .text_box p {
+  margin-top: 30px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.Location .container .care {
+  margin: 0 -10px 100px;
+}
+
+.Location .container .care:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.Location .container .care li {
+  float: left;
+  width: calc(33.3333% - 20px);
+  margin: 0 10px;
+}
+
+.Location .container .care li .pic {
+  width: 100%;
+  height: 500px;
+}
+
+.Location .container .care li .text_box {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.Location .container .care li .text_box p {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.Location .container .care li .text_box span {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 0.875rem;
+  text-align: center;
+  color: #555;
+  font-family: 'Noto Sans';
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.Location .container .support_center {
+  display: flex;
+}
+
+.Location .container .support_center .pic {
+  width: 50%;
+}
+
+.Location .container .support_center .text_box {
+  width: 50%;
+  padding: 50px;
+}
+
+.Location .container .support_center .text_box p {
+  margin-top: 30px;
+  line-height: 1.5;
+}
+
+.Location .container .map_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Location .container .map_box > div {
+  width: 70%;
+}
+
+.Location .container .map_box #map {
+  margin-top: 100px;
+  width: 100%;
+  height: 500px;
+  background: #000;
+  margin-bottom: 20px;
+}
+
+.Location .container .map_box .text_box {
+  width: 30%;
+  padding: 30px;
+}
+
+.Location .container .map_box .text_box h2 {
+  font-size: 2rem;
+}
+
+.Location .container .map_box .text_box p {
+  margin-top: 50px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.Location .container .map_box .btnSet {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-between;
+}
+
+.Location .container .map_box .btnSet button {
+  cursor: pointer;
+  height: 30px;
+  border: 1px solid #888;
+  padding: 5px 20px;
+}
+
+.Location .container .map_box .btnSet ul {
+  display: flex;
+}
+
+.Location .container .map_box .btnSet ul li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #888;
+  height: 30px;
+  padding: 0px 20px;
+  font-size: 0.75rem;
+  line-height: 1;
+  font-family: 'Roboto';
+  margin-left: 10px;
+  transition: 0.5s;
+}
+
+.Location .container .map_box .btnSet ul li.on {
+  background: #2e2c2c;
+  border: 1px solid #444;
+  color: #fff;
+}
+
+.Join .container {
+  padding: 0;
+}
+
+.Join .container::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.Join .container .visual {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  background-color: #111;
+}
+
+.Join .container .visual::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  display: block;
+  background: url(../../../public/img/join/visual.jpg) no-repeat center/cover;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.Join .container .visual .inner {
+  width: 1450px;
+}
+
+.Join .container .visual .text_box {
+  width: 500px;
+  position: relative;
+  z-index: 1;
+  max-width: 50vw;
+}
+
+.Join .container .visual .text_box h2 {
+  color: #fff;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.Join .container .visual .text_box p {
+  margin-top: 30px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.Join .container .inner {
+  margin: 0 auto;
+  display: flex;
+}
+
+.Join .container .inner .left_box {
+  width: 40%;
+  height: calc(100% - 144px);
+  padding: 30px 50px 0 0;
+  box-sizing: border-box;
+}
+
+.Join .container .inner .left_box h2 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 50px;
+}
+
+.Join .container .inner .left_box ul {
+  margin-top: 30px;
+}
+
+.Join .container .inner .left_box ul li {
+  margin-bottom: 20px;
+}
+
+.Join .container .inner .left_box ul li h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.Join .container .inner .left_box ul li p {
+  font-size: 0.875rem;
+  color: #aaa;
+}
+
+.Join .container .inner .form_box {
+  position: relative;
+  top: -146px;
+  float: right;
+  width: 60%;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.Join .container .inner .form_box .top_box {
+  display: flex;
+  background: #f4f4f6;
+  padding: 40px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+.Join .container .inner .form_box .top_box .pic {
+  margin-right: 20px;
+}
+
+.Join .container .inner .form_box .top_box .pic img {
+  object-fit: contain;
+}
+
+.Join .container .inner .form_box .top_box p {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.Join .container .inner .form_box table {
+  padding: 50px 0;
+  border: none;
+  width: 100%;
+}
+
+.Join .container .inner .form_box table input[type='reset'],
+.Join .container .inner .form_box table input[type='submit'] {
+  border: none;
+  width: 150px;
+  height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 10px;
+  cursor: pointer;
+  font-weight: 700;
+  background: #f4f4f6;
+  color: #111;
+  transition: 0.5s;
+}
+
+.Join .container .inner .form_box table input[type='reset']:hover,
+.Join .container .inner .form_box table input[type='submit']:hover {
+  background: #ffba00;
+}
+
+.Join .container .inner .form_box table tr:last-child th {
+  text-align: center;
+}
+
+.Join .container .inner .form_box table th {
+  font-size: 1.5rem;
+  text-align: left;
+  padding: 10px 30px 0;
+}
+
+.Join .container .inner .form_box table td {
+  border: none;
+  padding: 15px 30px;
+}
+
+.Join .container .inner .form_box table td input[type='text'],
+.Join .container .inner .form_box table td input[type='password'],
+.Join .container .inner .form_box table td select,
+.Join .container .inner .form_box table td textarea {
+  width: 100%;
+  border: none;
+  padding: 15px 10px;
+  resize: none;
+  background: #f4f4f6;
+}
+
+.Join .container .inner .form_box table td label {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.Join .container .inner .form_box table td input[type='radio'],
+.Join .container .inner .form_box table td input[type='checkbox'] {
+  margin-right: 20px;
+}
+
+.Join .container .inner .form_box table td .err {
+  font-size: 0.75rem;
+  color: #ffba00;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 1179px) {
+  .Join > .inner table td input[type='text'],
+  .Join > .inner table td input[type='password'],
+  .Join > .inner table td select,
+  .Join > .inner table td textarea {
+    width: 80%;
+  }
+  .Join > .inner table td label {
+    margin-right: 6px;
+  }
+  .Join > .inner table td input[type='radio'],
+  .Join > .inner table td input[type='checkbox'] {
+    margin-right: 20px;
+  }
+  .Join > .inner table td .err {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 539px) {
+  .Join > .inner table th {
+    display: none;
+  }
+  .Join > .inner table th:last-child {
+    display: block;
+  }
+  .Join > .inner table td {
+    border-left: none;
+  }
+  .Join > .inner table td input[type='text'],
+  .Join > .inner table td input[type='password'],
+  .Join > .inner table td select,
+  .Join > .inner table td textarea {
+    width: 100%;
+  }
+}

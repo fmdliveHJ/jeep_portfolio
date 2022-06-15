@@ -1,0 +1,19 @@
+#visual {
+	width: 100%;
+	height: 100vh;
+font-size: 10vw;
+position: relative;
+overflow: hidden;
+
+.swiper {
+	height: 100%;
+
+	.swiper-slide {
+		width: 100%;
+		background: aqua;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		}
+		}
+}

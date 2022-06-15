@@ -1,0 +1,308 @@
+.Media {
+  .story {
+    margin-bottom: 100px;
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    .left {
+      background: #be2237;
+      width: 50%;
+      height: 700px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding:20px;
+
+      .pic {
+        width: 100%;
+        padding: 50px 100px;
+        box-sizing: border-box;
+
+        img {
+          border: 3px solid #fff;
+        }
+
+      }
+
+      p {
+        font-size: $fontXXL;
+        color: #fff;
+        text-align: center;
+      }
+
+      span {
+
+        display: block;
+        font-size: $fontL;
+        color: #fff;
+      }
+
+    }
+
+    .right {
+      width: 50%;
+      height: 700px;
+      background: url(../../../public/img/media/story02.jpg) no-repeat;
+      background-position: center top;
+      background-size: cover;
+
+      .pic {
+        width: 100%;
+
+      }
+    }
+  }
+
+  .youtube_box {
+
+    margin-bottom: 100px;
+
+
+    >div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+
+      article {
+        width: 33.3333%;
+        padding: 20px 0px;
+        transition: 0.5s;
+
+        .text_box {
+
+          display: flex;
+          flex-wrap: wrap;
+          align-content: space-between;
+          padding: 0 20px;
+
+          h3 {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: $fontL;
+            font-family: 'work sans';
+            color: #777;
+            text-align: center;
+            width: 100%;
+
+          }
+
+          p {
+            font-size: $fontM;
+            line-height: 1.2;
+            font-family: 'Roboto';
+            color: #999;
+            filter: saturate(0);
+          }
+        }
+
+        .pic {
+          cursor: pointer;
+          width: 90%;
+          margin: 0 auto;
+          height: 195px;
+          background: #000;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+
+  .magazine {
+    .top_box {
+      position: relative;
+      width: 100%;
+      height: 700px;
+
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      .pic {
+        float: left;
+        padding: 20px;
+        box-sizing: border-box;
+
+        &.con1 {
+          width: 40%;
+          height: 100%;
+        }
+
+        &.con2 {
+          width: 60%;
+          height: 50%;
+        }
+
+        &.con3 {
+          width: 60%;
+          height: 50%;
+        }
+      }
+    }
+
+    .bottom_box {
+      position: relative;
+      width: 100%;
+      height: 350px;
+
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      .pic {
+        float: left;
+        width: 33.3333%;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .Media {
+    article {
+      h3 {
+        width: 47%;
+      }
+
+      .txt {
+        width: 50%;
+      }
+
+      .pic {
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 80px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mini) {
+  .Media {
+    .story {
+      .left {
+        width: 100%;
+        height: 500px;
+
+        .pic {
+          width: 100%;
+          height: 300px;
+          padding: 20px;
+        }
+      }
+
+      .right {
+        width: 100%;
+        height: 400px;
+      }
+    }
+
+    .youtube_box {
+      >div {
+        article {
+          width: 50%;
+        }
+      }
+    }
+
+    .magazine {
+      .top_box {
+        position: relative;
+        width: 100%;
+        height: 400px;
+      }
+
+      .bottom_box {
+        position: relative;
+        width: 100%;
+        height: auto;
+
+
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .Media {
+    .story {
+      .left {
+        width: 100%;
+        height: 500px;
+
+        .pic {
+          width: 100%;
+          height: 300px;
+          padding: 0;
+          margin: 10px 0;
+        }
+      }
+
+      .right {
+        width: 100%;
+        height: 400px;
+      }
+    }
+
+    .youtube_box {
+      >div {
+        article {
+          width: 100%;
+
+          .pic {
+            width: 100%;
+          }
+          }
+          }
+          }
+
+          .magazine {
+            .top_box {
+              position: relative;
+              width: 100%;
+              height: 400px;
+
+              .pic.con1 {
+                width: 100%;
+                padding: 10px;
+              }
+
+              .pic.con2 {
+                width: 100%;
+                padding: 10px;
+                }
+
+              .pic.con3 {
+                width: 100%;
+                padding: 10px;
+                }
+              }
+
+              .bottom_box {
+                position: relative;
+                width: 100%;
+                height: auto;
+
+        .pic {
+          width: 100%;
+          padding: 10px;
+          }
+
+      }
+    }
+
+
+  }
+}
+
