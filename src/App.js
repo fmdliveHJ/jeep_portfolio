@@ -21,18 +21,15 @@ import { useDispatch } from 'react-redux';
 function App() {
 	const dispatch = useDispatch();
 
-	const fetchYoutube = async () => {
-		const key = 'AIzaSyC77Pd__ju0Wqx_Umc-IuW7Cn2mWi_HVsk';
-		const playlist = 'PLooTX0MOEe6OAucsxOqZTV72g8pieLz9z';
-		const num = 9;
-		const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlist}&maxResults=${num}`;
 
-		await axios.get(url).then((json) => {
-			dispatch(setYoutube(json.data.items));
+	useEffect(() => {
+		dispatch({
+			type: 'FLICKR_START',
+			Opt: { type: 'user', count: 50, user: '195814985@N05' },
 		});
-	};
-
-	useEffect(fetchYoutube, []);
+		dispatch({ type: 'YOUTUBE_START' });
+		dispatch({ type: 'MEMBER_START' });
+	}, []);
 
 	return (
 		<>

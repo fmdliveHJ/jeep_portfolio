@@ -6,9 +6,9 @@
   put : 리듀서로 액션객체를 전달 (dispatch)
 */
 import { takeLatest, all, put, fork, call } from 'redux-saga/effects';
-import { fetchFlickr } from './api';
+import { fetchFlickr, fetchYoutube, fetchMember } from './api';
 
-//컴포넌트에서 받은 인수값을 api.js에 있는 axios함수에 연결하는 함수
+//flickr saga
 export function* returnFlickr(action) {
 	try {
 		const response = yield call(fetchFlickr, action.Opt);
@@ -17,13 +17,37 @@ export function* returnFlickr(action) {
 		yield put({ type: 'FLICKR_ERROR', payload: err });
 	}
 }
-
-//요청받은 액션타입에 따라 함수호출
 export function* callFlickr() {
 	yield takeLatest('FLICKR_START', returnFlickr);
 }
 
-//reducer에 적용될 rootSaga생성함수
+//youtube saga
+export function* returnYoutube() {
+	try {
+		const response = yield call(fetchYoutube);
+		yield put({ type: 'YOUTUBE_SUCCESS', payload: response.data.items });
+	} catch (err) {
+		yield put({ type: 'YOUTUBE_ERROR', payload: err });
+	}
+}
+export function* callYoutube() {
+	yield takeLatest('YOUTUBE_START', returnYoutube);
+}
+
+//members saga
+export function* returnMember() {
+	try {
+		const response = yield call(fetchMember);
+		console.log(response);
+		yield put({ type: 'MEMBER_SUCCESS', payload: response.data.members });
+	} catch (err) {
+		yield put({ type: 'MEMBER_ERROR', payload: err });
+	}
+}
+export function* callMember() {
+	yield takeLatest('MEMBER_START', returnMember);
+}
+
 export default function* rootSaga() {
-	yield all([fork(callFlickr)]);
+	yield all([fork(callFlickr), fork(callYoutube), fork(callMember)]);
 }

@@ -14,11 +14,7 @@ function Flickr() {
 	const [Loading, setLoading] = useState(true);
 	const [EnableClick, setEnableClick] = useState(true);
 	//Opt값에 처음 api인수로 전달될 값으로 초기화
-	const [Opt, setOpt] = useState({
-		type: 'user',
-		count: 50,
-		user: '195814985@N05',
-	});
+	const [Opt, setOpt] = useState(null);
 	const masonryOptions = { transitionDuration: '0.5s' };
 
 	const endLoading = () => {
@@ -106,6 +102,19 @@ function Flickr() {
 											/>
 										</div>
 										<h2>{item.title}</h2>
+										<div className='profile'>
+											<img
+												src={`http://farm${item.farm}.staticflickr.com/${item.server}/buddyicons/${item.owner}.jpg`}
+												alt={item.owner}
+												onError={(e) => {
+													e.target.setAttribute(
+														'src',
+														'https://www.flickr.com/images/buddyicon.gif'
+													);
+												}}
+											/>
+											<span onClick={showUser}>{item.owner}</span>
+										</div>
 									</div>
 								</article>
 							);
