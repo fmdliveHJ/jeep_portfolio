@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react_jeep/static/css/main.e35cd335.css",
-    "main.js": "/react_jeep/static/js/main.f7691b90.js",
-    "static/media/story02.jpg": "/react_jeep/static/media/story02.3a5f7371cca00b12fcae.jpg",
-    "static/media/visual.jpg": "/react_jeep/static/media/visual.e6d13b7078813b8ea58b.jpg",
-    "static/media/history.jpg": "/react_jeep/static/media/history.dcfa949f485548b8bd01.jpg",
-    "index.html": "/react_jeep/index.html",
-    "main.e35cd335.css.map": "/react_jeep/static/css/main.e35cd335.css.map",
-    "main.f7691b90.js.map": "/react_jeep/static/js/main.f7691b90.js.map"
+    "main.css": "/jeep_portfolio/static/css/main.408789f4.css",
+    "main.js": "/jeep_portfolio/static/js/main.cc1695ea.js",
+    "static/media/story02.jpg": "/jeep_portfolio/static/media/story02.3a5f7371cca00b12fcae.jpg",
+    "static/media/visual.jpg": "/jeep_portfolio/static/media/visual.e6d13b7078813b8ea58b.jpg",
+    "static/media/history.jpg": "/jeep_portfolio/static/media/history.dcfa949f485548b8bd01.jpg",
+    "index.html": "/jeep_portfolio/index.html",
+    "main.408789f4.css.map": "/jeep_portfolio/static/css/main.408789f4.css.map",
+    "main.cc1695ea.js.map": "/jeep_portfolio/static/js/main.cc1695ea.js.map"
   },
   "entrypoints": [
-    "static/css/main.e35cd335.css",
-    "static/js/main.f7691b90.js"
+    "static/css/main.408789f4.css",
+    "static/js/main.cc1695ea.js"
   ]
 }
