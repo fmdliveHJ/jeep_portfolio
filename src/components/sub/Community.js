@@ -47,7 +47,6 @@ function Community() {
 
 	//글 삭제 함수
 	const deletePost = (index) => {
-		console.log(index);
 		setPosts(Posts.filter((_, idx) => index !== idx));
 	};
 

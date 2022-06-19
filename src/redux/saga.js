@@ -6,48 +6,52 @@
   put : 리듀서로 액션객체를 전달 (dispatch)
 */
 import { takeLatest, all, put, fork, call } from 'redux-saga/effects';
-import { fetchFlickr, fetchYoutube, fetchMember } from './api';
+import { fetchGallery, fetchYoutube, fetchMember } from './api';
+import * as types from './actionType';
 
 //flickr saga
-export function* returnFlickr(action) {
+export function* returnGallery(action) {
 	try {
-		const response = yield call(fetchFlickr, action.Opt);
-		yield put({ type: 'FLICKR_SUCCESS', payload: response.data.photos.photo });
+		const response = yield call(fetchGallery, action.Opt);
+		yield put({
+			type: types.GALLERY.success,
+			payload: response.data.photos.photo,
+		});
 	} catch (err) {
-		yield put({ type: 'FLICKR_ERROR', payload: err });
+		yield put({ type: types.GALLERY.err, payload: err });
 	}
 }
-export function* callFlickr() {
-	yield takeLatest('FLICKR_START', returnFlickr);
+export function* callGallery() {
+	yield takeLatest(types.GALLERY.start, returnGallery);
 }
 
 //youtube saga
 export function* returnYoutube() {
 	try {
 		const response = yield call(fetchYoutube);
-		yield put({ type: 'YOUTUBE_SUCCESS', payload: response.data.items });
+		yield put({ type: types.YOUTUBE.success, payload: response.data.items });
 	} catch (err) {
-		yield put({ type: 'YOUTUBE_ERROR', payload: err });
+		yield put({ type: types.YOUTUBE.err, payload: err });
 	}
 }
 export function* callYoutube() {
-	yield takeLatest('YOUTUBE_START', returnYoutube);
+	yield takeLatest(types.YOUTUBE.start, returnYoutube);
 }
 
 //members saga
 export function* returnMember() {
 	try {
 		const response = yield call(fetchMember);
-		console.log(response);
-		yield put({ type: 'MEMBER_SUCCESS', payload: response.data.members });
+
+		yield put({ type: types.MEMBER.success, payload: response.data.members });
 	} catch (err) {
-		yield put({ type: 'MEMBER_ERROR', payload: err });
+		yield put({ type: types.MEMBER.err, payload: err });
 	}
 }
 export function* callMember() {
-	yield takeLatest('MEMBER_START', returnMember);
+	yield takeLatest(types.MEMBER.start, returnMember);
 }
 
 export default function* rootSaga() {
-	yield all([fork(callFlickr), fork(callYoutube), fork(callMember)]);
+	yield all([fork(callGallery), fork(callYoutube), fork(callMember)]);
 }

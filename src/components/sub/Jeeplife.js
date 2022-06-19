@@ -1,8 +1,7 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector} from 'react-redux';
 import Layout from '../common/Layout';
 
 function Jeeplife({}) {
-	const dispatch = useDispatch();
 	const path = process.env.PUBLIC_URL;
 	const Members = useSelector((store) => store.memberReducer.members);
 

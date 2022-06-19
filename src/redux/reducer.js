@@ -1,16 +1,15 @@
 import { combineReducers } from 'redux';
-
-
+import * as types from './actionType';
 
 const memberReducer = (state = { members: [] }, action) => {
 	switch (action.type) {
-		case 'MEMBER_START':
+		case types.MEMBER.start:
 			return { ...state };
 
-		case 'MEMBER_SUCCESS':
+		case types.MEMBER.success:
 			return { ...state, members: action.payload };
 
-		case 'MEMBER_ERROR':
+		case types.MEMBER.err:
 			return { ...state, error: action.payload };
 
 		default:
@@ -20,13 +19,13 @@ const memberReducer = (state = { members: [] }, action) => {
 
 const youtubeReducer = (state = { youtube: [] }, action) => {
 	switch (action.type) {
-		case 'YOUTUBE_START':
+		case types.YOUTUBE.start:
 			return { ...state };
 
-		case 'YOUTUBE_SUCCESS':
+		case types.YOUTUBE.success:
 			return { ...state, youtube: action.payload };
 
-		case 'YOUTUBE_ERROR':
+		case types.YOUTUBE.err:
 			return { ...state, error: action.payload };
 
 		default:
@@ -34,15 +33,15 @@ const youtubeReducer = (state = { youtube: [] }, action) => {
 	}
 };
 
-const flickrReducer = (state = { flickr: [] }, action) => {
+const galleryReducer = (state = { gallery: [] }, action) => {
 	switch (action.type) {
-		case 'FLICKR_START':
+		case types.GALLERY.start:
 			return { ...state };
 
-		case 'FLICKR_SUCCESS':
-			return { ...state, flickr: action.payload };
+		case types.GALLERY.success:
+			return { ...state, gallery: action.payload };
 
-		case 'FLICKR_ERROR':
+		case types.GALLERY.err:
 			return { ...state, error: action.payload };
 
 		default:
@@ -53,6 +52,6 @@ const flickrReducer = (state = { flickr: [] }, action) => {
 const reducers = combineReducers({
 	memberReducer,
 	youtubeReducer,
-	flickrReducer,
+	galleryReducer,
 });
 export default reducers;

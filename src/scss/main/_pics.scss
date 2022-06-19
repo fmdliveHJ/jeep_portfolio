@@ -5,9 +5,33 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 10vw;
 	position: relative;
-	overflow: hidden;
+	flex-wrap: wrap;
+
+	>h2 {
+		position: absolute;
+		top: -20px;
+		left: 50%;
+		transform: translateX(-50%);
+		background: #fff;
+		z-index: 2;
+		padding: 10px;
+
+
+	}
+
+	.box {
+		max-width: 1200px;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		height: 90%;
+
+		.pic {
+			height: 50%;
+			width: 25%;
+		}
+	}
 
 	p {
 		font: bold 200px/1 'arial';

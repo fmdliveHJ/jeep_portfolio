@@ -70,15 +70,19 @@ header {
 
 		.inner {
 			h1 a {
-				color: #fff;
+				color: #111;
 			}
 
 			#gnb li a {
-				color: #eee;
+				color: #111;
 			}
 
 			.fa-bars {
-				color: #fff;
+				color: #111;
+				}
+
+				h1 {
+					background-image: url(../../../public/img/common/main_logo_jeep.png);
 			}
 		}
 	}

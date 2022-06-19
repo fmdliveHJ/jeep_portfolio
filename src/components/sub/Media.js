@@ -1,13 +1,11 @@
 import Layout from '../common/Layout';
-import axios from 'axios';
-import { useEffect, useState, useRef } from 'react';
+
+import {  useState, useRef } from 'react';
 import Popup from '../common/Popup';
-import { setYoutube } from '../../redux/action';
 import { useSelector, useDispatch } from 'react-redux';
 
 function Media() {
 	const pop = useRef(null);
-	const dispatch = useDispatch();
 	const Vids = useSelector((store) => store.youtubeReducer.youtube);
 
 	const [Index, setIndex] = useState(0);

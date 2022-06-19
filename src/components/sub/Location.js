@@ -72,7 +72,7 @@ function Location() {
 		const map_instance = new kakao.maps.Map(conMap.current, option);
 
 		const handleResize = () => {
-			console.log('브라우저 리사이즈 마커 가운데 고정');
+
 			map_instance.setCenter(Info[Index].latlng);
 		};
 		//마커 출력

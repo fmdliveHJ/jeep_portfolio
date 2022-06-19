@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-export const fetchFlickr = async (opt) => {
-	console.log(opt);
+export const fetchGallery = async (opt) => {
+
 	const key = 'e348bed2bd80ff66c01682c0c396ac50';
 	const method_interest = 'flickr.interestingness.getList';
 	const method_search = 'flickr.photos.search';

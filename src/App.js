@@ -5,30 +5,27 @@ import Footer from './components/common/Footer';
 
 //sub
 import Jeeplife from './components/sub/Jeeplife';
-import Gallery from './components/sub/Gallery';
 import Community from './components/sub/Community';
-import Flickr from './components/sub/Flickr';
+import Gallery from './components/sub/Gallery';
 import Media from './components/sub/Media';
 import Location from './components/sub/Location';
 import Join from './components/sub/Join';
 import Main from './components/main/Main';
 
-import axios from 'axios';
 import { useEffect } from 'react';
-import { setYoutube } from './redux/action';
 import { useDispatch } from 'react-redux';
+import * as types from './redux/actionType';
 
 function App() {
 	const dispatch = useDispatch();
 
-
 	useEffect(() => {
 		dispatch({
-			type: 'FLICKR_START',
+			type: types.GALLERY.start,
 			Opt: { type: 'user', count: 50, user: '195814985@N05' },
 		});
-		dispatch({ type: 'YOUTUBE_START' });
-		dispatch({ type: 'MEMBER_START' });
+		dispatch({ type: types.YOUTUBE.start });
+		dispatch({ type: types.MEMBER.start });
 	}, []);
 
 	return (
@@ -42,11 +39,10 @@ function App() {
 				<Route path='/' render={() => <Header type={'sub'} />} />
 			</Switch>
 
-			<Route path='/Jeeplife' component={Jeeplife} />
+			<Route path='/jeeplife' component={Jeeplife} />
 			<Route path='/community' component={Community} />
 			<Route path='/gallery' component={Gallery} />
-			<Route path='/flickr' component={Flickr} />
-			<Route path='/Media' component={Media} />
+			<Route path='/media' component={Media} />
 			<Route path='/location' component={Location} />
 			<Route path='/join' component={Join} />
 
