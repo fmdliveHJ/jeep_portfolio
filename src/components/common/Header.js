@@ -12,7 +12,7 @@ function Header({ type }) {
 		<header className={type}>
 			<div className='inner'>
 				<h1>
-					<Link to='/'>JEEP1</Link>
+					<Link to='/'>JEEP</Link>
 				</h1>
 				<ul id='gnb'>
 					<li>
