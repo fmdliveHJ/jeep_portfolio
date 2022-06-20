@@ -16,7 +16,19 @@ function Community() {
 
 	const getLocalData = () => {
 		const data = localStorage.getItem('post');
-		return JSON.parse(data);
+		const dummyPosts = [
+			{ title: 'Hello5', content: 'Here comes description in detail.' },
+			{ title: 'Hello4', content: 'Here comes description in detail.' },
+			{ title: 'Hello3', content: 'Here comes description in detail.' },
+			{ title: 'Hello2', content: 'Here comes description in detail.' },
+			{ title: 'Hello1', content: 'Here comes description in detail.' },
+		];
+
+		if (data) {
+			return JSON.parse(data);
+		} else {
+			return dummyPosts;
+		}
 	};
 
 	const [Posts, setPosts] = useState(getLocalData());
@@ -47,6 +59,7 @@ function Community() {
 
 	//글 삭제 함수
 	const deletePost = (index) => {
+		console.log(index);
 		setPosts(Posts.filter((_, idx) => index !== idx));
 	};
 
@@ -77,7 +90,6 @@ function Community() {
 		setPosts(
 			Posts.map((post, idx) => {
 				if (idx === index) post.enableUpdate = true;
-
 				return post;
 			})
 		);
@@ -93,11 +105,8 @@ function Community() {
 			})
 		);
 	};
-	const main = useRef(null);
-	const favoriteBtn = useRef(null);
 
 	useEffect(() => {
-		//console.log(Posts);
 		localStorage.setItem('post', JSON.stringify(Posts));
 	}, [Posts]);
 
@@ -139,60 +148,49 @@ function Community() {
 				</div>
 
 				<div className='showBox'>
-					{Posts.map((post, idx) => {
-						return (
-							<article key={idx}>
-								{post.enableUpdate ? (
-									//수정모드
-									<>
-										<div className='editTxt'>
-											<input
-												type='text'
-												defaultValue={post.title}
-												ref={inputEdit}
-											/>
-											<br />
-											<textarea
-												cols='30'
-												rows='5'
-												ref={textareaEdit}
-												defaultValue={post.content}></textarea>
-										</div>
+				{Posts.map((post, idx) => {
+					return (
+						<article key={idx}>
+							{post.enableUpdate ? (
+								//수정모드
+								<>
+									<div className='editTxt'>
+										<input
+											type='text'
+											defaultValue={post.title}
+											ref={inputEdit}
+										/>
+										<br />
+										<textarea
+											cols='30'
+											rows='5'
+											ref={textareaEdit}
+											defaultValue={post.content}></textarea>
+									</div>
 
-										<div className='btnSet'>
-											<button onClick={() => disableUpdate(idx)}>
-												{' '}
-												<FontAwesomeIcon icon={faCancel} />
-											</button>
-											<button onClick={() => updatePost(idx)}>
-												{' '}
-												<FontAwesomeIcon icon={faSave} />
-											</button>
-										</div>
-									</>
-								) : (
-									//출력
-									<>
-										<div className='txt'>
-											<h2>{post.title}</h2>
-											<p>{post.content}</p>
-										</div>
-										<div className='btnSet'>
-											<button onClick={() => enableUpdate(idx)}>
-												{' '}
-												<FontAwesomeIcon icon={faEdit} />
-											</button>
-											<button onClick={() => deletePost(idx)}>
-												{' '}
-												<FontAwesomeIcon icon={faDeleteLeft} />
-											</button>
-										</div>
-									</>
-								)}
-							</article>
-						);
-					})}
-				</div>
+									<div className='btnSet'>
+										<button onClick={() => disableUpdate(idx)}>CANCEL</button>
+										<button onClick={() => updatePost(idx)}>SAVE</button>
+									</div>
+								</>
+							) : (
+								//출력
+								<>
+									<div className='txt'>
+										<h2>{post.title}</h2>
+										<p>{post.content}</p>
+									</div>
+
+									<div className='btnSet'>
+										<button onClick={() => enableUpdate(idx)}>EDIT</button>
+										<button onClick={() => deletePost(idx)}>DELETE</button>
+									</div>
+								</>
+							)}
+						</article>
+					);
+				})}
+			</div>
 			</div>
 		</Layout>
 	);

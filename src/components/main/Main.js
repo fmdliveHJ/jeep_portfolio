@@ -68,7 +68,6 @@ function Main() {
 				<Header type={'main'} />
 				<Visual />
 				<History />
-
 				<Pics Scrolled={Scrolled} start={pos.current[2]} base={base} />
 				<Vids />
 				<Btns setIndex={setIndex} />
