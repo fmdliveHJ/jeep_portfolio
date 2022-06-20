@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/jeep_portfolio/static/css/main.5ca971eb.css",
-    "main.js": "/jeep_portfolio/static/js/main.90b88783.js",
+    "main.js": "/jeep_portfolio/static/js/main.acd78dfa.js",
     "static/media/story02.jpg": "/jeep_portfolio/static/media/story02.3a5f7371cca00b12fcae.jpg",
     "static/media/visual.jpg": "/jeep_portfolio/static/media/visual.e6d13b7078813b8ea58b.jpg",
     "static/media/history.jpg": "/jeep_portfolio/static/media/history.dcfa949f485548b8bd01.jpg",
     "static/media/pics01.jpg": "/jeep_portfolio/static/media/pics01.fafc22ec134750abe3ed.jpg",
     "index.html": "/jeep_portfolio/index.html",
     "main.5ca971eb.css.map": "/jeep_portfolio/static/css/main.5ca971eb.css.map",
-    "main.90b88783.js.map": "/jeep_portfolio/static/js/main.90b88783.js.map"
+    "main.acd78dfa.js.map": "/jeep_portfolio/static/js/main.acd78dfa.js.map"
   },
   "entrypoints": [
     "static/css/main.5ca971eb.css",
-    "static/js/main.90b88783.js"
+    "static/js/main.acd78dfa.js"
   ]
 }
