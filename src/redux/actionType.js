@@ -15,3 +15,4 @@ export const GALLERY = {
 	success: 'GALLERY_SUCCESS',
 	err: 'GALLERY_ERROR',
 };
+

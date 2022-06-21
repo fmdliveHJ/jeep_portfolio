@@ -119,10 +119,12 @@ function Gallery() {
 						/>
 						<button onClick={showSearch}>SEARCH</button>
 					</div>
+					</div>
 
 					<div className='frame' ref={frame}>
 						<Masonry elementType={'div'} options={masonryOptions}>
 							{gallery.map((item, idx) => {
+								if (idx < 12) {
 								return (
 									<article key={idx}>
 										<div className='inner'>
@@ -134,17 +136,18 @@ function Gallery() {
 													pop.current.open();
 												}}>
 												<img
-													src={`https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`}
+													src={`https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg`}
 													alt={item.title}
 												/>
 											</div>
 										</div>
 									</article>
 								);
+							}
 							})}
 						</Masonry>
 					</div>
-				</div>
+				
 			</Layout>
 
 			<Popup ref={pop}>

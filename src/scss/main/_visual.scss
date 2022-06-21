@@ -3,7 +3,7 @@
 	height: 100vh;
 	position: relative;
 	overflow: hidden;
-
+	//swiper
 	.swiper {
 		height: 100%;
 
@@ -12,97 +12,187 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+
+			.con {
+				position: relative;
+				text-align: center;
+
+				svg {
+					position: absolute;
+					left: 50%;
+					top: 0;
+					transform: translateX(-50%);
+					width: 100%;
+					height: 460px;
+					max-width: 1200px;
+
+					text {
+						font-family: 'Roboto';
+						font-weight: 700;
+						font-size: 12rem;
+
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(100px, 270px);
+						fill: #111;
+						stroke: #000;
+						stroke-dasharray: 2300;
+						stroke-dashoffset: 2300;
+						stroke-width: 0;
+
+						}
+
+						.s_text {
+							position: absolute;
+							display: block;
+							transform: translate(10%, 25%);
+							font-size: 6rem;
+						}
+					}
+
+					.pic {
+						width: 65%;
+						margin: 0 auto;
+						position: relative;
+						z-index: 2;
+						opacity: 1;
+				}
+
+				.text_box {
+					position: relative;
+					margin: 0 auto;
+					width: 70%;
+
+					p {
+						font-size: $fontXXL;
+						font-weight: 700;
+						margin-top: 30px;
+						}
+
+					span {
+						margin-top: 30px;
+						display: inline-block;
+						width: 100%;
+						}
+						}
+
+			}
 		}
-	}
 
-	.cursor {
-		width: 50px;
-		height: 50px;
-		background: #111;
-		position: fixed;
-		border-radius: 50%;
-		top: 0;
-		top: -99999px;
-		left: 0;
-		z-index: 5;
-		mix-blend-mode: difference;
-		transform: translate(-50%, -50%);
-		pointer-events: none;
-		transition: transform 0.3s;
-	}
+		.swiper-slide-active {
+			.con {
+				svg {
+					animation: zIndex 1s linear 0.5s forwards;
 
-	.con {
-		position: relative;
-		text-align: center;
+					text {
+						position: relative;
 
-		.pic {
-			width: 65%;
-			margin: 0 auto;
-			position: relative;
-			z-index: 1;
-			opacity: 0.9;
+						fill: rgba(0, 0, 0, 0.7);
+						stroke-dashoffset: 0;
+						text-transform: uppercase;
+						animation: stroke 1s linear 0.5s forwards;
+					}
+				}
+			}
 		}
 
-		h2 {
+		.swiper-button-prev {
 			position: absolute;
-			top: 50%;
-			left: 50%;
+			left: auto;
+			right: 22%;
+			color: #111;
+			top: auto;
+			bottom: 15%;
+			width: 50px;
+			height: 50px;
+			padding:10px;
+		transition: 0.5s;
+
+		}
+
+		.swiper-button-next {
+			position: absolute;
+			left: auto;
+			right: 17.5%;
+			color: #111;
+			top: auto;
+			bottom: 15%;
+			width: 50px;
+			height: 50px;
+
+			transition: 0.5s;
+
+		}
+
+		.swiper-button-prev:after {
+			font-family: 'Roboto';
+			content: 'PREV';
+			font-weight: 700;
+			padding: 10px;
+			font-size: $fontXL;
+			background: $pointColor;
+		}
+
+		.swiper-button-next:after {
+			font-family: 'Roboto';
+			content: 'NEXT';
+			font-weight: 700;
+			padding: 10px;
+			font-size: $fontXL;
+			background: $pointColor;
+		}
+		}
+
+		.cursor {
+			width: 50px;
+			height: 50px;
+			background: #111;
+			position: fixed;
+			border-radius: 50%;
+			top: 0;
+			top: -99999px;
+			left: 0;
+			z-index: 5;
+			mix-blend-mode: difference;
 			transform: translate(-50%, -50%);
-			font-size: 12rem;
+			pointer-events: none;
+			transition: transform 0.3s;
+		}
 
-			&.s_text {
-				font-size: 8rem;
-				line-height: 1.2;
+		@keyframes zIndex {
+			0% {
+				z-index: 1;
+			}
+
+			100% {
+				z-index: 3;
 			}
 		}
 
-		.text_box {
-			position: absolute;
-			bottom: -120px;
-			left: 50%;
-			transform: translateX(-50%);
-			width: 70%;
-
-			p {
-				font-size: $fontXL;
-				margin-top: 30px;
+		@keyframes stroke {
+			0% {
+				z-index: 1;
+				fill: rgba(0, 0, 0, 0);
+				stroke: rgb(0, 0, 0);
+				stroke-dashoffset: 25%;
+				stroke-dasharray: 0 50%;
+				stroke-width: 2;
 			}
 
-			span {
-				margin-top: 30px;
-				display: inline-block;
-				width: 80%;
-
+			80% {
+				fill: rgba(0, 0, 0, 0);
+				stroke: rgb(0, 0, 0);
+				stroke-width: 3;
 			}
-		}
 
-	}
-
-	.swiper-button-prev {
-		position: absolute;
-		left: auto;
-		right: 20%;
-		color: #111;
-		top: auto;
-		bottom: 20%;
-		width: 50px;
-		height: 50px;
-
-		transition: 0.5s;
-
-	}
-
-	.swiper-button-next {
-		position: absolute;
-		left: auto;
-		right: 17.5%;
-		color: #111;
-		top: auto;
-		bottom: 20%;
-		width: 50px;
-		height: 50px;
-
-		transition: 0.5s;
-
+			100% {
+				fill: rgb(0, 0, 0);
+				stroke: rgba(0, 0, 0, 0);
+				stroke-dashoffset: -25%;
+				stroke-dasharray: 50% 0;
+				stroke-width: 0;
+				z-index: 3;
+			}
 }
 }

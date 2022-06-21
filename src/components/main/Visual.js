@@ -47,12 +47,16 @@ function Visual() {
 				centeredSlides={true}
 				breakpoints={{
 					// when window width is >= 320px
-					320: {
+					1180: {
 						slidesPerView: 1,
 						spaceBetween: 20,
 					},
-					1180: {
+					1400: {
 						slidesPerView: 1.4,
+						spaceBetween: 0,
+					},
+					1920: {
+						slidesPerView: 1.7,
 						spaceBetween: 0,
 					},
 				}}>
@@ -61,7 +65,9 @@ function Visual() {
 						className='con'
 						onMouseEnter={onMouseEnter}
 						onMouseLeave={onMouseLeave}>
-						<h2>COMPASS</h2>
+						<svg>
+							<text>COMPASS</text>
+						</svg>
 						<div className='pic'>
 							<img src={`${path}/img/main/visual01.png`}></img>
 						</div>
@@ -82,7 +88,9 @@ function Visual() {
 						className='con'
 						onMouseEnter={onMouseEnter}
 						onMouseLeave={onMouseLeave}>
-						<h2>RENEGADE</h2>
+						<svg>
+							<text>RENEGADE</text>
+						</svg>
 						<div className='pic'>
 							<img src={`${path}/img/main/visual02.png`}></img>
 						</div>
@@ -102,7 +110,12 @@ function Visual() {
 						className='con'
 						onMouseEnter={onMouseEnter}
 						onMouseLeave={onMouseLeave}>
-						<h2 className='s_text'>GRAND CHEROKEE</h2>
+						<svg>
+						<text className='s_text'>NEW GRAND</text>
+							<text>
+								CHEROKEE
+							</text>
+						</svg>
 						<div className='pic'>
 							<img src={`${path}/img/main/visual03.png`}></img>
 						</div>
@@ -121,15 +134,18 @@ function Visual() {
 						className='con'
 						onMouseEnter={onMouseEnter}
 						onMouseLeave={onMouseLeave}>
-						<h2 className='s_text'>WRANGLER 4XE</h2>
+						<svg>
+						<text className='s_text'>4XE</text>
+							<text>WRANGLER  </text>
+						</svg>
 						<div className='pic'>
 							<img src={`${path}/img/main/visual04.png`}></img>
 						</div>
 						<div className='text_box'>
 							<p>THE FUTURE IS NOW</p>
 							<span>
-								Wrangler 4xe의 내외부를 살펴보세요. 플러그인과 함께 모험을
-								준비하세요.
+							Wrangler 4xe 는 지금까지 경험하지 못한 강력한 오프로드 주행성능과 시내에서 효율적인 전기 주행이 가능합니다. <br /> 
+							E-Select 주행 모드는 Power Routing 기술을 통해 최적화된 성능과 넓은 주행거리를 보장합니다. 
 							</span>
 						</div>
 					</div>
@@ -139,14 +155,17 @@ function Visual() {
 						className='con'
 						onMouseEnter={onMouseEnter}
 						onMouseLeave={onMouseLeave}>
-						<h2>GLADIATOR</h2>
+						<svg>
+							<text>GLADIATOR</text>
+						</svg>
 						<div className='pic'>
 							<img src={`${path}/img/main/visual05.png`}></img>
 						</div>
 						<div className='text_box'>
 							<p>TAKE IT ALL WITH YOU</p>
 							<span>
-								뛰어난 견인능력으로 모험에 필요한 모든 것을 가져갈 수 있습니다.
+								뛰어난 견인능력으로 모험에 필요한 모든 것을 가져갈 수 있습니다. <br />
+								전후방 Tru-Lok® 차동기어 잠금장치와 FOX 쇼크가 장착된 ALL-NEW Gladiator Rubicon은 강력한 성능을 자랑하는 트럭입니다.
 							</span>
 						</div>
 					</div>
@@ -156,7 +175,9 @@ function Visual() {
 						className='con'
 						onMouseEnter={onMouseEnter}
 						onMouseLeave={onMouseLeave}>
-						<h2>WRANGLER</h2>
+						<svg>
+							<text>WRANGLER</text>
+						</svg>
 						<div className='pic'>
 							<img src={`${path}/img/main/visual06.png`}></img>
 						</div>
@@ -176,7 +197,10 @@ function Visual() {
 						className='con'
 						onMouseEnter={onMouseEnter}
 						onMouseLeave={onMouseLeave}>
-						<h2 className='s_text'>GRAND CHEROKEE</h2>
+						<svg>
+							<text className='s_text'>GRAND</text>
+							<text>CHEROKEE</text>
+						</svg>
 						<div className='pic'>
 							<img src={`${path}/img/main/visual07.png`}></img>
 						</div>
@@ -195,7 +219,9 @@ function Visual() {
 						className='con'
 						onMouseEnter={onMouseEnter}
 						onMouseLeave={onMouseLeave}>
-						<h2>CHEROKEE</h2>
+						<svg>
+							<text>CHEROKEE</text>
+						</svg>
 						<div className='pic'>
 							<img src={`${path}/img/main/visual08.png`}></img>
 						</div>

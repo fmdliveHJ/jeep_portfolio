@@ -151,43 +151,54 @@ function Community() {
 				{Posts.map((post, idx) => {
 					return (
 						<article key={idx}>
-							{post.enableUpdate ? (
-								//수정모드
-								<>
-									<div className='editTxt'>
-										<input
-											type='text'
-											defaultValue={post.title}
-											ref={inputEdit}
-										/>
-										<br />
-										<textarea
-											cols='30'
-											rows='5'
-											ref={textareaEdit}
-											defaultValue={post.content}></textarea>
-									</div>
+						{post.enableUpdate ? (
+							//수정모드
+							<>
+								<div className='editTxt'>
+									<input
+										type='text'
+										defaultValue={post.title}
+										ref={inputEdit}
+									/>
+									<br />
+									<textarea
+										cols='30'
+										rows='5'
+										ref={textareaEdit}
+										defaultValue={post.content}></textarea>
+								</div>
 
-									<div className='btnSet'>
-										<button onClick={() => disableUpdate(idx)}>CANCEL</button>
-										<button onClick={() => updatePost(idx)}>SAVE</button>
-									</div>
-								</>
-							) : (
-								//출력
-								<>
-									<div className='txt'>
-										<h2>{post.title}</h2>
-										<p>{post.content}</p>
-									</div>
-
-									<div className='btnSet'>
-										<button onClick={() => enableUpdate(idx)}>EDIT</button>
-										<button onClick={() => deletePost(idx)}>DELETE</button>
-									</div>
-								</>
-							)}
-						</article>
+								<div className='btnSet'>
+									<button onClick={() => disableUpdate(idx)}>
+										{' '}
+										<FontAwesomeIcon icon={faCancel} />
+									</button>
+									<button onClick={() => updatePost(idx)}>
+										{' '}
+										<FontAwesomeIcon icon={faSave} />
+									</button>
+								</div>
+							</>
+						) : (
+							//출력
+							<>
+								<div className='txt'>
+									<h2>{post.title}</h2>
+									<p>{post.content}</p>
+								</div>
+								<div className='btnSet'>
+									<button onClick={() => enableUpdate(idx)}>
+										{' '}
+										<FontAwesomeIcon icon={faEdit} />
+									</button>
+									<button onClick={() => deletePost(idx)}>
+										{' '}
+										<FontAwesomeIcon icon={faDeleteLeft} />
+									</button>
+								</div>
+							</>
+						)}
+					</article>
 					);
 				})}
 			</div>

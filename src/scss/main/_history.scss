@@ -12,8 +12,6 @@
     background: #fff;
     z-index: 2;
     padding: 10px;
-
-
   }
 
   .preview_members {
@@ -21,8 +19,6 @@
     flex-wrap: wrap;
     height: 100%;
     position: relative;
-
-
     .box {
       max-width: 1200px;
       height: 100%;
@@ -31,14 +27,10 @@
       justify-content: center;
       align-content: center;
       flex-wrap: wrap;
-
-
       .pic {
-
         position: relative;
         width: 50%;
         height: 70%;
-
         h3 {
           width: 100%;
           position: absolute;
@@ -51,8 +43,6 @@
           background: #111;
           padding: 10px 0;
         }
-
-        img {}
       }
 
       .text_box {
@@ -63,11 +53,55 @@
         justify-content: center;
 
         p {
-          font-size: $fontL;
+          font-size: $fontLL;
+          line-height: 1.5;
           margin-bottom: 50px;
         }
       }
 
     }
+  }
+  .swiper-button-prev {
+    position: absolute;
+    left: auto;
+    right: 22%;
+    color: #111;
+    top: auto;
+    bottom: 15%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    transition: 0.5s;
+
+  }
+
+  .swiper-button-next {
+    position: absolute;
+    left: auto;
+    right: 17.5%;
+    color: #111;
+    top: auto;
+    bottom: 15%;
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+  }
+
+  .swiper-button-prev:after {
+    font-family: 'Roboto';
+    content: 'PREV';
+    font-weight: 700;
+    padding: 10px;
+    font-size: $fontXL;
+    background: $pointColor;
+  }
+
+  .swiper-button-next:after {
+    font-family: 'Roboto';
+    content: 'NEXT';
+    font-weight: 700;
+    padding: 10px;
+    font-size: $fontXL;
+    background: $pointColor;
   }
 }

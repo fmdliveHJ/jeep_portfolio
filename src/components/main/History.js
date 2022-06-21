@@ -19,10 +19,12 @@ function History() {
 					navigation={true}
 					modules={[Navigation, Pagination]}
 					loop={true}
-					centeredSlides={true}>
-					{Members.map((member, ide) => {
+					centeredSlides={true}
+					initialSlide={1}
+				>
+					{Members.map((member, idx) => {
 						return (
-							<SwiperSlide key={ide}>
+							<SwiperSlide key={idx} >
 								<div className='box'>
 									<div className='pic'>
 										<h3>{member.years}</h3>
@@ -30,16 +32,10 @@ function History() {
 									</div>
 									<div className='text_box'>
 										<p>
-											Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-											Est corrupti ipsum mollitia minima quaerat esse dolorem.
-											Soluta nemo reprehenderit cum, quo consectetur optio vero
-											iure veritatis impedit exercitationem architecto quam.
+										{member.desc}
 										</p>
 										<p>
-											Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-											Est corrupti ipsum mollitia minima quaerat esse dolorem.
-											Soluta nemo reprehenderit cum, quo consectetur optio vero
-											iure veritatis impedit exercitationem architecto quam.
+										{member.desc02}
 										</p>
 									</div>
 								</div>

@@ -18,15 +18,16 @@ function Pics({ Scrolled, start, base }) {
 			<h3 style={{ left: 100 + position / 2 }}>FLICKR</h3> */}
 			<div className='box'>
 				{gallery.map((item, idx) => {
-					if (idx < 12) {
+					if (idx < 8) {
 						return (
 							<div className='pic' key={idx} className='pic'
 							onClick={() => {
 								setIndex(idx);
 								pop.current.open();
 							}}>
+									<h3>{item.title}</h3>
 								<img
-									src={`https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg`}
+									src={`https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg`}
 									alt={item.title}
 								/>
 							</div>

@@ -28,7 +28,17 @@
 
 		.pic {
 			height: 50%;
-			width: 16.6666%;
+			width: 25%;
+			position:relative;
+
+			h3 {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				color: #fff;
+				font-size: $fontXXXL;
+			}
 
 
 
