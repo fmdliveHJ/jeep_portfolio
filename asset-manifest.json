@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/jeep_portfolio/static/css/main.ccbb1a28.css",
-    "main.js": "/jeep_portfolio/static/js/main.6e58e092.js",
+    "main.css": "/jeep_portfolio/static/css/main.cd017eab.css",
+    "main.js": "/jeep_portfolio/static/js/main.fc309d3e.js",
     "static/media/story02.jpg": "/jeep_portfolio/static/media/story02.3a5f7371cca00b12fcae.jpg",
     "static/media/visual.jpg": "/jeep_portfolio/static/media/visual.e6d13b7078813b8ea58b.jpg",
     "static/media/history.jpg": "/jeep_portfolio/static/media/history.dcfa949f485548b8bd01.jpg",
     "static/media/pics01.jpg": "/jeep_portfolio/static/media/pics01.fafc22ec134750abe3ed.jpg",
     "index.html": "/jeep_portfolio/index.html",
-    "main.ccbb1a28.css.map": "/jeep_portfolio/static/css/main.ccbb1a28.css.map",
-    "main.6e58e092.js.map": "/jeep_portfolio/static/js/main.6e58e092.js.map"
+    "main.cd017eab.css.map": "/jeep_portfolio/static/css/main.cd017eab.css.map",
+    "main.fc309d3e.js.map": "/jeep_portfolio/static/js/main.fc309d3e.js.map"
   },
   "entrypoints": [
-    "static/css/main.ccbb1a28.css",
-    "static/js/main.6e58e092.js"
+    "static/css/main.cd017eab.css",
+    "static/js/main.fc309d3e.js"
   ]
 }
