@@ -1,0 +1,44 @@
+{
+  "pics": [
+    {
+      "title": "COMPASS",
+      "pic": "../img/main/pics01.jpg",
+      "video": "../img/main/compass.mp4"
+    },
+    {
+      "title": "RENEGADE",
+      "pic": "../img/main/pics02.jpg",
+      "video": "../img/main/renegade.mp4"
+    },
+    {
+      "title": "ALL-NEW GRAND CHEROKEE L",
+      "pic": "../img/main/pics03.jpg",
+      "video": "../img/main/newgrandCherokee.mp4"
+    },
+    {
+      "title": "WRANGLER 4xe",
+      "pic": "../img/main/pics04.jpg",
+      "video": "../img/main/wrangler4xe.mp4"
+    },
+    {
+      "title": "GLADIATOR",
+      "pic": "../img/main/pics05.jpg",
+      "video": "../img/main/gladiator.mp4"
+    },
+    {
+      "title": "WRANGLER",
+      "pic": "../img/main/pics06.jpg",
+      "video": "../img/main/wrangler.mp4"
+    },
+    {
+      "title": "GRAND CHEROKEE",
+      "pic": "../img/main/pics07.jpg",
+      "video": "../img/main/grandcherokee.mp4"
+    },
+    {
+      "title": "CHEROKEE",
+      "pic": "../img/main/pics08.jpg",
+      "video": "../img/main/cherokee.mp4"
+    }
+  ]
+}
