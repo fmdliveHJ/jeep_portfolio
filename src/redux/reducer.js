@@ -17,6 +17,22 @@ const memberReducer = (state = { members: [] }, action) => {
 	}
 };
 
+const picsReducer = (state = { pics: [] }, action) => {
+	switch (action.type) {
+		case types.PICS.start:
+			return { ...state };
+
+		case types.PICS.success:
+			return { ...state, pics: action.payload };
+
+		case types.PICS.err:
+			return { ...state, error: action.payload };
+
+		default:
+			return state;
+	}
+};
+
 const youtubeReducer = (state = { youtube: [] }, action) => {
 	switch (action.type) {
 		case types.YOUTUBE.start:
@@ -53,5 +69,6 @@ const reducers = combineReducers({
 	memberReducer,
 	youtubeReducer,
 	galleryReducer,
+	picsReducer,
 });
 export default reducers;

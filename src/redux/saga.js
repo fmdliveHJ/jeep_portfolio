@@ -6,7 +6,7 @@
   put : 리듀서로 액션객체를 전달 (dispatch)
 */
 import { takeLatest, all, put, fork, call } from 'redux-saga/effects';
-import { fetchGallery, fetchYoutube, fetchMember } from './api';
+import { fetchGallery, fetchYoutube, fetchMember, fetchPics } from './api';
 import * as types from './actionType';
 
 //flickr saga
@@ -52,6 +52,24 @@ export function* callMember() {
 	yield takeLatest(types.MEMBER.start, returnMember);
 }
 
+//pics saga
+export function* returnPics() {
+	try {
+		const response = yield call(fetchPics);
+
+		yield put({ type: types.PICS.success, payload: response.data.pics });
+	} catch (err) {
+		yield put({ type: types.PICS.err, payload: err });
+	}
+}
+export function* callPics() {
+	yield takeLatest(types.PICS.start, returnPics);
+}
+
+
+
+
+
 export default function* rootSaga() {
-	yield all([fork(callGallery), fork(callYoutube), fork(callMember)]);
+	yield all([fork(callGallery), fork(callYoutube), fork(callMember), fork(callPics)]);
 }

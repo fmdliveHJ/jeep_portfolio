@@ -16,3 +16,10 @@ export const GALLERY = {
 	err: 'GALLERY_ERROR',
 };
 
+export const PICS = {
+	start: 'PICS_START',
+	success: 'PICS_SUCCESS',
+	err: 'PICS_ERROR',
+};
+
+

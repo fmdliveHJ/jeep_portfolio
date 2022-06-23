@@ -35,3 +35,9 @@ export const fetchMember = async () => {
 
 	return await axios.get(url);
 };
+
+export const fetchPics = async () => {
+	const url = `${process.env.PUBLIC_URL}/DB/pics.json`;
+
+	return await axios.get(url);
+};

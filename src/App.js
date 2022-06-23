@@ -26,6 +26,7 @@ function App() {
 		});
 		dispatch({ type: types.YOUTUBE.start });
 		dispatch({ type: types.MEMBER.start });
+		dispatch({ type: types.PICS.start });
 	}, []);
 
 	return (
