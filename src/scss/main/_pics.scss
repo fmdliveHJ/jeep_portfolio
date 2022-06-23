@@ -73,3 +73,58 @@
 		left: 100px;
 	}
 }
+
+@media screen and (max-width:$tablet) {
+	#pic {
+		.box {
+			.pic {
+				height: 33.3333%;
+				width: 33.3333%;
+				position: relative;
+
+				&:nth-child(7),
+				&:nth-child(8) {
+					width: 50%;
+				}
+
+				h3 {
+					font-size: $fontXXL;
+
+				}
+
+			}
+		}
+	}
+}
+
+@media screen and (max-width:$mini) {
+	#pic {
+		.box {
+			.pic {
+				height: 25%;
+				width: 50%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width:$mobile) {
+	#pic {
+		.box {
+			.pic {
+				height: 12.5%;
+				width: 100%;
+
+				&:nth-child(7),
+				&:nth-child(8) {
+					width: 100%;
+				}
+
+
+				h3 {
+					font-size: $fontL;
+				}
+			}
+		}
+	}
+}
