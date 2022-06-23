@@ -40,11 +40,15 @@
 			width: 40%;
 			font-size: $fontXXXL;
 			color: #fff;
+			transition: 0.5s;
+			transform: translateX(-20%);
 		}
 
 		p {
 			width: 60%;
 			color: #fff;
+			transition: 0.5s;
+			transform: translateX(20%);
 		}
 	}
 
@@ -61,8 +65,18 @@
 			width: calc(33.3333% - 20px);
 			margin: 0 10px 20px;
 			height: 200px;
-			cursor: pointer;
+		transform: scale(0.8);
+		transition: 0.5s ease-in-out 0.1s;
 
+		span {
+				cursor: pointer;
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				background: $pointColor;
+				padding: 5px 10px;
+				font-size: $fontS;
+				}
 			.pic {
 				height: 100%;
 			}
@@ -76,15 +90,30 @@
 
 		}
 		}
-
 		video {
 			margin-top: 100px;
 			max-width: 800px;
 			position: relative;
 			z-index: 1;
 
+		}
 
+		&.on {
+			.top_text {
+				h3 {
+					transform: translateX(0);
+				}
 
+				p {
+					transform: translateX(0);
+				}
+				}
+
+				.vids_youtube {
+					article {
+						transform: scale(1);
+					}
+				}
 		}
 		}
 

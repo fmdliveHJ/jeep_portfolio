@@ -31,6 +31,8 @@
         position: relative;
         width: 50%;
         height: 70%;
+        transition: 0.5s ease-in-out;
+        transform: translateX(-20%);
         h3 {
           width: 100%;
           position: absolute;
@@ -56,6 +58,12 @@
           font-size: $fontLL;
           line-height: 1.5;
           margin-bottom: 50px;
+          transition: 0.5s linear;
+          transform: translateY(30%);
+
+          &:last-child {
+            transform: translateY(40%);
+          }
         }
       }
 
@@ -103,6 +111,21 @@
     padding: 10px;
     font-size: $fontXL;
     background: $pointColor;
+  }
+  &.on {
+    .preview_members {
+      .box {
+        .pic {
+          transform: translateX(0);
+        }
+
+        .text_box {
+          p {
+            transform: translateY(0);
+          }
+        }
+      }
+    }
   }
 }
 

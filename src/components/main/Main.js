@@ -19,7 +19,7 @@ function Main() {
 	//현재 스크롤되는 값을 관리할 state추가
 	const [Scrolled, setScrolled] = useState(0);
 	let secs = null;
-	const base = -200;
+	const base = -300;
 
 	const getPos = () => {
 		pos.current = [];
