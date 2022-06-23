@@ -3,8 +3,10 @@ import Layout from '../common/Layout';
 import {  useState, useRef } from 'react';
 import Popup from '../common/Popup';
 import { useSelector, useDispatch } from 'react-redux';
+import MediaSlider from './MediaSlider';
 
 function Media() {
+	const path = process.env.PUBLIC_URL;
 	const pop = useRef(null);
 	const Vids = useSelector((store) => store.youtubeReducer.youtube);
 
@@ -15,8 +17,6 @@ function Media() {
 		setIndex(index);
 	};
 
-	const path = process.env.PUBLIC_URL;
-
 	return (
 		<>
 			<Layout name={'Media'}>
@@ -26,15 +26,17 @@ function Media() {
 						<h3>Story </h3>
 						<div className='left'>
 							<p>JEEP BRAND MAGAZINE </p>
-							<div className='pic'>
-								<img
-									src={`${path}/img/media/story01.jpg`}
-									alt='지프 유투브 사진'
-								/>
-							</div>
+							<MediaSlider />
 							<span>계절의 시작과 함께 찾아오는 JEEP STORY를 만나보세요 </span>
 						</div>
-						<div className='right'></div>
+						<div className='right'>
+							<video
+								muted
+								autoPlay
+								loop
+								controls
+								src={`${path}/img/media/story.mp4`}></video>
+						</div>
 					</div>
 
 					<div className='youtube_box'>
@@ -84,7 +86,7 @@ function Media() {
 						</div>
 						<div className='bottom_box'>
 							<div className='pic con1'>
-								<img src={`${path}/img/media/magazine04.jpg`} alt='' />
+								<h3>SEE OUR JEEP STORIES</h3>
 							</div>
 							<div className='pic con2'>
 								<img src={`${path}/img/media/magazine05.jpg`} alt='' />
