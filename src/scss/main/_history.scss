@@ -78,39 +78,31 @@
     bottom: 15%;
     width: 50px;
     height: 50px;
-    padding: 10px;
+    padding:10px;
     transition: 0.5s;
-
+  background: $pointColor;
   }
-
   .swiper-button-next {
     position: absolute;
     left: auto;
-    right: 17.5%;
+    right: calc(22% - 50px);
     color: #111;
     top: auto;
     bottom: 15%;
     width: 50px;
     height: 50px;
+    background: $pointColor;
     transition: 0.5s;
   }
-
   .swiper-button-prev:after {
-    font-family: 'Roboto';
-    content: 'PREV';
     font-weight: 700;
     padding: 10px;
     font-size: $fontXL;
-    background: $pointColor;
   }
-
   .swiper-button-next:after {
-    font-family: 'Roboto';
-    content: 'NEXT';
     font-weight: 700;
     padding: 10px;
     font-size: $fontXL;
-    background: $pointColor;
   }
   &.on {
     .preview_members {
@@ -148,7 +140,7 @@
 
     .swiper-button-next {
       bottom: 5%;
-      right: calc(50% - 60px);
+      right: calc(50% - 50px);
     }
 
     .swiper-button-prev:after {

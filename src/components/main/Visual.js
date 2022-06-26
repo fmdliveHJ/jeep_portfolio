@@ -17,7 +17,6 @@ function Visual() {
 		cursor.current.style.left = e.clientX + 'px';
 		cursor.current.style.top = e.clientY + 'px';
 	};
-
 	const onMouseEnter = (e) => {
 		cursor.current.style = ` transform: translate(-50%, -50%)  scale(4) `;
 	};
@@ -35,7 +34,6 @@ function Visual() {
 			isCursor = false;
 			cursor.current.style.display = 'none';
 		});
-
 		return () => window.removeEventListener('mousemove', mouseMove);
 	}, []);
 	return (

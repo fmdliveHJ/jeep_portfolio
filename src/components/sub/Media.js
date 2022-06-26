@@ -41,7 +41,6 @@ function Media() {
 
 					<div className='youtube_box'>
 						<h3>YOUTUBE</h3>
-
 						<div>
 							{Vids.map((vid, idx) => {
 								const tit = vid.snippet.title;

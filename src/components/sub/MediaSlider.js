@@ -94,16 +94,16 @@ function MediaSlider() {
 					<img src={`${path}/img/media/story01.jpg`} alt='지프 유투브 사진' />
 				</li>
 				<li className='s2'>
-					<img src={`${path}/img/media/story01.jpg`} alt='지프 유투브 사진' />
+					<img src={`${path}/img/media/story02.jpg`} alt='지프 유투브 사진' />
 				</li>
 				<li className='s3'>
-					<img src={`${path}/img/media/story01.jpg`} alt='지프 유투브 사진' />
+					<img src={`${path}/img/media/story03.jpg`} alt='지프 유투브 사진' />
 				</li>
 				<li className='s4'>
-					<img src={`${path}/img/media/story01.jpg`} alt='지프 유투브 사진' />
+					<img src={`${path}/img/media/story04.jpg`} alt='지프 유투브 사진' />
 				</li>
 				<li className='s5'>
-					<img src={`${path}/img/media/story01.jpg`} alt='지프 유투브 사진' />
+					<img src={`${path}/img/media/story05.jpg`} alt='지프 유투브 사진' />
 				</li>
 			</ul>
 
