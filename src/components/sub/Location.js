@@ -67,12 +67,9 @@ function Location() {
 
 	useEffect(() => {
 		conMap.current.innerHTML = '';
-
 		//지도 인스턴스 생성
 		const map_instance = new kakao.maps.Map(conMap.current, option);
-
 		const handleResize = () => {
-
 			map_instance.setCenter(Info[Index].latlng);
 		};
 		//마커 출력
@@ -92,13 +89,6 @@ function Location() {
 		window.addEventListener('resize', handleResize);
 
 		return () => window.removeEventListener('resize', handleResize);
-
-		//버튼 활성화
-		/*
-		for (const btn of btns.current.children)
-			btn.classList.remove('on');
-		btns.current.children[Index].classList.add('on');
-		*/
 	}, [Index]);
 
 	useEffect(() => {

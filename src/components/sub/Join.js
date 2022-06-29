@@ -8,8 +8,6 @@ function Join() {
 		pwd2: '',
 		email: '',
 		comments: '',
-		gender: null,
-		interests: null,
 	};
 	const [Val, setVal] = useState(initVal);
 	const [Err, setErr] = useState({});
@@ -56,25 +54,6 @@ function Join() {
 		const { name, value } = e.target;
 		setVal({ ...Val, [name]: value });
 	};
-
-	const handleRadio = (e) => {
-		const { name } = e.target;
-		const isCheck = e.target.checked;
-		setVal({ ...Val, [name]: isCheck });
-	};
-
-	const handleCheck = (e) => {
-		let isCheck = false;
-		const { name } = e.target;
-		const inputs = e.target.parentElement.querySelectorAll('input');
-
-		inputs.forEach((el) => {
-			if (el.checked) isCheck = true;
-		});
-
-		setVal({ ...Val, [name]: isCheck });
-	};
-
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		setErr(check(Val));

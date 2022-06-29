@@ -28,13 +28,6 @@ function Gallery() {
 		}, 1000);
 	};
 
-	const showInterest = () => {
-		if (!EnableClick) return;
-		setLoading(true);
-		frame.current.classList.remove('on');
-		setOpt({ type: 'interest', count: 50 });
-	};
-
 	const showSearch = () => {
 		if (!EnableClick) return;
 		const tag = input.current.value.trim();
@@ -45,20 +38,6 @@ function Gallery() {
 		frame.current.classList.remove('on');
 		setOpt({ type: 'search', count: 50, tags: tag });
 	};
-
-	const showUser = (e) => {
-		if (!EnableClick) return;
-		const user = e.target.innerText;
-
-		setLoading(true);
-		frame.current.classList.remove('on');
-		setOpt({ type: 'user', count: 50, user: user });
-	};
-
-	//Opt값이 변경될때마다 해당 값을 FLICKR_START타입의 액션객체에 담아서 saga.js로 전달
-	useEffect(() => {
-		dispatch({ type: types.GALLERY.start, Opt });
-	}, [Opt]);
 
 	//flickr데이터가 변경되면 endLoading을 호출해
 	//로딩바 제거하고 컴포넌트 frame출력

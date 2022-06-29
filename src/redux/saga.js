@@ -66,10 +66,6 @@ export function* callPics() {
 	yield takeLatest(types.PICS.start, returnPics);
 }
 
-
-
-
-
 export default function* rootSaga() {
 	yield all([fork(callGallery), fork(callYoutube), fork(callMember), fork(callPics)]);
 }
