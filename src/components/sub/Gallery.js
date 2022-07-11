@@ -1,14 +1,12 @@
 import Layout from '../common/Layout';
 import Popup from '../common/Popup';
 import { useEffect, useState, useRef } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Masonry from 'react-masonry-component';
-import * as types from '../../redux/actionType';
 
 function Gallery() {
 	const path = process.env.PUBLIC_URL;
 	const { gallery } = useSelector((store) => store.galleryReducer);
-	const dispatch = useDispatch();
 	const frame = useRef(null);
 	const input = useRef(null);
 	const pop = useRef(null);
@@ -98,12 +96,12 @@ function Gallery() {
 						/>
 						<button onClick={showSearch}>SEARCH</button>
 					</div>
-					</div>
+				</div>
 
-					<div className='frame' ref={frame}>
-						<Masonry elementType={'div'} options={masonryOptions}>
-							{gallery.map((item, idx) => {
-								if (idx < 12) {
+				<div className='frame' ref={frame}>
+					<Masonry elementType={'div'} options={masonryOptions}>
+						{gallery.map((item, idx) => {
+							if (idx < 12) {
 								return (
 									<article key={idx}>
 										<div className='inner'>
@@ -123,10 +121,9 @@ function Gallery() {
 									</article>
 								);
 							}
-							})}
-						</Masonry>
-					</div>
-				
+						})}
+					</Masonry>
+				</div>
 			</Layout>
 
 			<Popup ref={pop}>

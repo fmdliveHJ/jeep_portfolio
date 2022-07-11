@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
 import { Pagination } from 'swiper';
@@ -109,10 +109,8 @@ function Visual() {
 						onMouseEnter={onMouseEnter}
 						onMouseLeave={onMouseLeave}>
 						<svg>
-						<text className='s_text'>NEW GRAND</text>
-							<text>
-								CHEROKEE
-							</text>
+							<text className='s_text'>NEW GRAND</text>
+							<text>CHEROKEE</text>
 						</svg>
 						<div className='pic'>
 							<img src={`${path}/img/main/visual03.png`}></img>
@@ -133,8 +131,8 @@ function Visual() {
 						onMouseEnter={onMouseEnter}
 						onMouseLeave={onMouseLeave}>
 						<svg>
-						<text className='s_text'>4XE</text>
-							<text>WRANGLER  </text>
+							<text className='s_text'>4XE</text>
+							<text>WRANGLER </text>
 						</svg>
 						<div className='pic'>
 							<img src={`${path}/img/main/visual04.png`}></img>
@@ -142,8 +140,10 @@ function Visual() {
 						<div className='text_box'>
 							<p>THE FUTURE IS NOW</p>
 							<span>
-							Wrangler 4xe 는 지금까지 경험하지 못한 강력한 오프로드 주행성능과 시내에서 효율적인 전기 주행이 가능합니다. <br /> 
-							E-Select 주행 모드는 Power Routing 기술을 통해 최적화된 성능과 넓은 주행거리를 보장합니다. 
+								Wrangler 4xe 는 지금까지 경험하지 못한 강력한 오프로드
+								주행성능과 시내에서 효율적인 전기 주행이 가능합니다. <br />
+								E-Select 주행 모드는 Power Routing 기술을 통해 최적화된 성능과
+								넓은 주행거리를 보장합니다.
 							</span>
 						</div>
 					</div>
@@ -162,8 +162,10 @@ function Visual() {
 						<div className='text_box'>
 							<p>TAKE IT ALL WITH YOU</p>
 							<span>
-								뛰어난 견인능력으로 모험에 필요한 모든 것을 가져갈 수 있습니다. <br />
-								전후방 Tru-Lok® 차동기어 잠금장치와 FOX 쇼크가 장착된 ALL-NEW Gladiator Rubicon은 강력한 성능을 자랑하는 트럭입니다.
+								뛰어난 견인능력으로 모험에 필요한 모든 것을 가져갈 수 있습니다.{' '}
+								<br />
+								전후방 Tru-Lok® 차동기어 잠금장치와 FOX 쇼크가 장착된 ALL-NEW
+								Gladiator Rubicon은 강력한 성능을 자랑하는 트럭입니다.
 							</span>
 						</div>
 					</div>

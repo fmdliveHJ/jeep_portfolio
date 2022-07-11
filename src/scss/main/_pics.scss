@@ -27,7 +27,7 @@
 		.pic {
 			height: 50%;
 			width: 25%;
-			position:relative;
+			position: relative;
 
 			h3 {
 				transition: 0.5s ease-in-out;
@@ -39,10 +39,12 @@
 				font-size: $fontXXXL;
 				z-index: 5;
 			}
+
 			img {
 				transition: 0.5s;
 				display: block;
 			}
+
 			video {
 				opacity: 0;
 				position: absolute;
@@ -61,6 +63,7 @@
 				h3 {
 					top: 80%;
 				}
+
 				video {
 					opacity: 1;
 				}
@@ -131,3 +134,4 @@
 		}
 	}
 }
+

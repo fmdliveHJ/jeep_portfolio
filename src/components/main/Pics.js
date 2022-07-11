@@ -1,6 +1,5 @@
 import { useSelector } from 'react-redux';
-import { useRef, useState } from 'react';
-import Popup from '../common/Popup';
+import { useRef } from 'react';
 
 function Pics({ Scrolled, start, base }) {
 	const path = process.env.PUBLIC_URL;
@@ -31,7 +30,6 @@ function Pics({ Scrolled, start, base }) {
 								<div
 									className='pic'
 									key={idx}
-									className='pic'
 									onMouseEnter={onMouseEnter}
 									onMouseLeave={onMouseLeave}>
 									<h3>{item.title}</h3>

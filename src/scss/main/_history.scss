@@ -19,6 +19,7 @@
     flex-wrap: wrap;
     height: 100%;
     position: relative;
+
     .box {
       max-width: 1200px;
       height: 100%;
@@ -27,12 +28,14 @@
       justify-content: center;
       align-content: center;
       flex-wrap: wrap;
+
       .pic {
         position: relative;
         width: 50%;
         height: 70%;
         transition: 0.5s ease-in-out;
         transform: translateX(-20%);
+
         h3 {
           width: 100%;
           position: absolute;
@@ -69,6 +72,7 @@
 
     }
   }
+
   .swiper-button-prev {
     position: absolute;
     left: auto;
@@ -78,10 +82,11 @@
     bottom: 15%;
     width: 50px;
     height: 50px;
-    padding:10px;
+    padding: 10px;
     transition: 0.5s;
-  background: $pointColor;
+    background: $pointColor;
   }
+
   .swiper-button-next {
     position: absolute;
     left: auto;
@@ -94,16 +99,19 @@
     background: $pointColor;
     transition: 0.5s;
   }
+
   .swiper-button-prev:after {
     font-weight: 700;
     padding: 10px;
     font-size: $fontXL;
   }
+
   .swiper-button-next:after {
     font-weight: 700;
     padding: 10px;
     font-size: $fontXL;
   }
+
   &.on {
     .preview_members {
       .box {
@@ -198,3 +206,4 @@
     }
   }
 }
+

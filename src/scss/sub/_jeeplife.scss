@@ -170,11 +170,8 @@
 		}
 
 		.history {
-
 			article {
 				width: 100%;
-
-
 				display: flex;
 
 				&::after {
@@ -240,10 +237,7 @@
 						text-align: right;
 						margin-bottom: 50px;
 						line-height: 1.2;
-
-
 					}
-
 					span {
 						width: 70%;
 						line-height: 2;
@@ -269,7 +263,6 @@
 
 	//inner
 }
-
 
 @media screen and (max-width: $tablet) {
 	.Jeeplife {
@@ -380,7 +373,6 @@
 						.text_box {
 							text-align: right;
 							align-items: end;
-
 						}
 					}
 
@@ -462,7 +454,6 @@
 							p {
 								text-align: right;
 							}
-
 						}
 					}
 
@@ -500,10 +491,6 @@
 	}
 }
 
-//mobile
-
-
-
 @media screen and (max-width: $mobile) {
 	.Jeeplife {
 		.container {
@@ -519,6 +506,4 @@
 		}
 	}
 }
-
-//mobile
 

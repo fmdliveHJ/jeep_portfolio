@@ -183,6 +183,7 @@
               top: -9999px;
               left: -9999px;
             }
+
             .err {
               font-size: $fontS;
               color: $pointColor;
@@ -257,8 +258,8 @@
                 font-size: $fontS;
                 color: $pointColor;
                 margin-left: 10px;
-                }
-                }
+              }
+            }
           }
         }
       }
@@ -288,27 +289,31 @@
                 display: block;
                 width: 100%;
               }
+
               th {
                 display: block;
+
                 input[type='reset'],
                 input[type='submit'] {
                   width: 48%;
                   margin: 0 1%;
                 }
-                }
+              }
 
               td {
-              display: block;
-              width: 100%;
-              input {
+                display: block;
                 width: 100%;
+
+                input {
+                  width: 100%;
+                }
               }
-              }
+            }
           }
-          }
-          }
+        }
 
       }
     }
   }
 }
+

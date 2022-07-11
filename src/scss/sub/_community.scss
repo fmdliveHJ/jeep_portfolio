@@ -64,7 +64,7 @@
         .top_box {
           margin-bottom: 50px;
           padding: 20px;
-          }
+        }
 
         input[type='text'],
         textarea {
@@ -74,7 +74,7 @@
           background: #f4f4f6;
           margin-bottom: 20px;
           font-family: 'Noto Sans';
-          }
+        }
 
         textarea {
           height: 300px;
@@ -94,9 +94,9 @@
             color: #fff;
             cursor: pointer;
             margin-right: 20px;
-            }
-            }
-            }
+          }
+        }
+      }
 
       .showBox {
         width: 50%;
@@ -131,15 +131,16 @@
                 width: 100%;
                 height: 100%;
               }
-              }
-
             }
+
+          }
 
           .txt {
             display: flex;
             justify-content: start;
             width: 80%;
             flex-direction: column;
+
             p {
               height: 0;
               overflow: hidden;
@@ -149,7 +150,7 @@
           .editTxt {
             width: 100%;
             transition: 0.5s;
-            margin-bottom:30px;
+            margin-bottom: 30px;
 
             input[type='text'],
             textarea {
@@ -160,18 +161,19 @@
               font-family: 'Noto Sans';
             }
 
-            }
+          }
 
-            .editTxt+.btnSet {
-              position: absolute;
-              bottom: 30px;
-              right: 30px;
+          .editTxt+.btnSet {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
           }
         }
       }
     }
   }
 }
+
 @media screen and (max-width: $tablet) {
   .Community {
     .container {
@@ -201,6 +203,7 @@
     }
   }
 }
+
 @media screen and (max-width: $mobile) {
   .Community {
     .container {
@@ -236,3 +239,4 @@
     }
   }
 }
+
