@@ -4,7 +4,7 @@ import { useRef, useEffect } from "react";
 
 function MediaSlider() {
   const path = process.env.PUBLIC_URL;
-  console.log("app");
+
   const panel = useRef(null);
   const next = useRef(null);
   const prev = useRef(null);

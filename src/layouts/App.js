@@ -39,7 +39,6 @@ function App() {
         {/* 서브용 header */}
         <Route path="/" render={() => <Header type={"sub"} />} />
       </Switch>
-
       <Route path="/jeeplife" component={Jeeplife} />
       <Route path="/community" component={Community} />
       <Route path="/gallery" component={Gallery} />
