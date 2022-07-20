@@ -18,27 +18,27 @@ $fontS: 0.75rem;
 $pointColor: #ffba00;
 $bgColor : rgb(46, 44, 44);
 
-//common
-@import 'common/reset';
-@import 'common/layout';
-@import 'common/header';
-@import 'common/footer';
-@import 'common/menu';
-@import 'common/popup';
+//components
+@import 'components/btns';
+@import 'components/footer';
+@import 'components/header';
+@import 'components/history';
+@import 'components/menu';
+@import 'components/pics';
+@import 'components/popup';
+@import 'components/reset';
+@import 'components/vids';
+@import 'components/visual';
 
-//main
-@import 'main/visual';
-@import 'main/pics';
-@import 'main/vids';
-@import 'main/btns';
-@import 'main/history';
+//layouts
+@import 'layouts/layout';
 
-//sub {
-@import 'sub/jeeplife';
-@import 'sub/community';
-@import 'sub/media';
-@import 'sub/mediaSlider';
-@import 'sub/location';
-@import 'sub/join';
-@import 'sub/gallery';
+//pages 
+@import 'pages/jeeplife';
+@import 'pages/community';
+@import 'pages/media';
+@import 'pages/mediaSlider';
+@import 'pages/location';
+@import 'pages/join';
+@import 'pages/gallery';
 
