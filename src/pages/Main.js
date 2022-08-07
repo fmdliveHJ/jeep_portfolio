@@ -68,7 +68,7 @@ function Main() {
         <Header type={"main"} />
         <MainVisual />
         <MainHistory />
-        <MainPics Scrolled={Scrolled} start={pos.current[2]} base={base} />
+        <MainPics />
         <MainVids />
         <Btns setIndex={setIndex} />
       </main>
