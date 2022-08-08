@@ -31,7 +31,6 @@ function Main() {
     const scroll = window.scrollY;
     const btns = main.current.querySelectorAll(".scroll_navi li");
     //현재 스크롤되는 거리값을 scrolled state에 저장해서 관리
-    setScrolled(scroll);
 
     pos.current.map((pos, idx) => {
       if (scroll >= pos + base) {

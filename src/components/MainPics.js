@@ -1,11 +1,9 @@
 import { useSelector } from 'react-redux';
 import { useRef } from 'react';
 
-function MainPics({ Scrolled, start, base }) {
+function MainPics() {
   const path = process.env.PUBLIC_URL;
   const { pics } = useSelector((store) => store.picsReducer);
-  let position = 0;
-  if (start) position = Scrolled - start - base;
 
   const video = useRef(null);
 
