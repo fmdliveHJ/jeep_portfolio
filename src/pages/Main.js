@@ -15,7 +15,7 @@ function Main() {
   //useRef로 생성한 객체에 저장된 값은 컴포넌트가 재실행되더라도 값이 유지됨
   //useRef에 담겨있는 값이 변경되더라도 컴포넌트가 재실행되지 않음
   const pos = useRef([]);
-  const [Index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0);
   //현재 스크롤되는 값을 관리할 state추가
   const [Scrolled, setScrolled] = useState(0);
   let secs = null;
@@ -56,10 +56,10 @@ function Main() {
   useEffect(() => {
     new Anime(window, {
       prop: "scroll",
-      value: pos.current[Index],
+      value: pos.current[index],
       duration: 500,
     });
-  }, [Index]);
+  }, [index]);
 
   return (
     <>

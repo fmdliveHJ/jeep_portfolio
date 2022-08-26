@@ -31,7 +31,7 @@ function Community() {
     }
   };
 
-  const [Posts, setPosts] = useState(getLocalData());
+  const [posts, setPosts] = useState(getLocalData());
   const [Allowed, setAllowed] = useState(true);
 
   //글 초기화  함수
@@ -52,7 +52,7 @@ function Community() {
     }
     setPosts([
       { title: input.current.value, content: textarea.current.value },
-      ...Posts,
+      ...posts,
     ]);
     resetPost();
   };
@@ -60,7 +60,7 @@ function Community() {
   //글 삭제 함수
   const deletePost = (index) => {
     console.log(index);
-    setPosts(Posts.filter((_, idx) => index !== idx));
+    setPosts(posts.filter((_, idx) => index !== idx));
   };
 
   //실제 글 수정 함수
@@ -72,7 +72,7 @@ function Community() {
     }
 
     setPosts(
-      Posts.map((post, idx) => {
+      posts.map((post, idx) => {
         if (idx === index) {
           post.title = inputEdit.current.value;
           post.content = textareaEdit.current.value;
@@ -88,7 +88,7 @@ function Community() {
     if (!Allowed) return;
     setAllowed(false);
     setPosts(
-      Posts.map((post, idx) => {
+      posts.map((post, idx) => {
         if (idx === index) post.enableUpdate = true;
         return post;
       })
@@ -99,7 +99,7 @@ function Community() {
   const disableUpdate = (index) => {
     setAllowed(true);
     setPosts(
-      Posts.map((post, idx) => {
+      posts.map((post, idx) => {
         if (idx === index) post.enableUpdate = false;
         return post;
       })
@@ -107,8 +107,8 @@ function Community() {
   };
 
   useEffect(() => {
-    localStorage.setItem("post", JSON.stringify(Posts));
-  }, [Posts]);
+    localStorage.setItem("post", JSON.stringify(posts));
+  }, [posts]);
 
   return (
     <Layout name={"Community"}>
@@ -149,7 +149,7 @@ function Community() {
         </div>
 
         <div className="showBox">
-          {Posts.map((post, idx) => {
+          {posts.map((post, idx) => {
             return (
               <article key={idx}>
                 {post.enableUpdate ? (

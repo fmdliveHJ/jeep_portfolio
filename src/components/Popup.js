@@ -9,13 +9,13 @@ import { useEffect, useState, forwardRef, useImperativeHandle } from 'react';
 
 const Popup = forwardRef(({ children }, ref) => {
 	//자신의 open여부를 결정하는 state생성
-	const [Open, setOpen] = useState(false);
+	const [open, setOpen] = useState(false);
 
 	useEffect(() => {
-		Open
-			? (document.body.style.overflow = 'hidden')
-			: (document.body.style.overflow = 'auto');
-	}, [Open]);
+    open
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "auto");
+  }, [open]);
 
 	//해당 컴포넌트에서 만들어지는 함수를 부모컴포넌트에서 사용가능하도록 외부로 반환가능
 	useImperativeHandle(ref, () => {
@@ -26,26 +26,27 @@ const Popup = forwardRef(({ children }, ref) => {
 	});
 
 	return (
-		<>
-			<AnimatePresence>
-				{Open && (
-					<motion.aside
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						exit={{ opacity: 0 }}>
-						<aside className='pop'>
-							<div className='con'>
-								{children}
-								<span className='close' onClick={() => setOpen(false)}>
-									close
-								</span>
-							</div>
-						</aside>
-					</motion.aside>
-				)}
-			</AnimatePresence>
-		</>
-	);
+    <>
+      <AnimatePresence>
+        {open && (
+          <motion.aside
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <aside className="pop">
+              <div className="con">
+                {children}
+                <span className="close" onClick={() => setOpen(false)}>
+                  close
+                </span>
+              </div>
+            </aside>
+          </motion.aside>
+        )}
+      </AnimatePresence>
+    </>
+  );
 });
 
 export default Popup;

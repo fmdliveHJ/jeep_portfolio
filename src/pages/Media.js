@@ -10,7 +10,7 @@ function Media() {
   const pop = useRef(null);
   const Vids = useSelector((store) => store.youtubeReducer.youtube);
 
-  const [Index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0);
 
   const handlePopup = (index) => {
     pop.current.open();
@@ -102,7 +102,7 @@ function Media() {
       <Popup ref={pop}>
         {Vids.length !== 0 && (
           <iframe
-            src={`https://www.youtube.com/embed/${Vids[Index].snippet.resourceId.videoId}`}
+            src={`https://www.youtube.com/embed/${Vids[index].snippet.resourceId.videoId}`}
             frameBorder="0"
           ></iframe>
         )}

@@ -5,7 +5,7 @@ function Location() {
   //윈도우 전역객체에 있는 kakao키값을 바로 변수로 비구조화 할당
   const path = process.env.PUBLIC_URL;
   const { kakao } = window;
-  const info = [
+  const mapInfo = [
     {
       title: "영등포 서비스 센터",
       latlng: new kakao.maps.LatLng(37.5432, 126.889),
@@ -34,19 +34,19 @@ function Location() {
       },
     },
   ];
-  const [Location, setLocation] = useState(null);
-  const [Traffic, setTraffic] = useState(false);
-  const [Info, setInfo] = useState(info);
-  const [Index, setIndex] = useState(0);
+  const [location, setLocation] = useState(null);
+  const [traffic, setTraffic] = useState(false);
+  const [info, setInfo] = useState(mapInfo);
+  const [index, setIndex] = useState(0);
   const conMap = useRef(null);
   const btns = useRef(null);
   const option = {
-    center: Info[Index].latlng,
+    center: info[index].latlng,
     level: 3,
   };
-  const imageSrc = Info[Index].imgSrc;
-  const imageSize = Info[Index].imgSize;
-  const imageOption = Info[Index].imgPos;
+  const imageSrc = info[index].imgSrc;
+  const imageSize = info[index].imgSize;
+  const imageOption = info[index].imgPos;
 
   //마커이미지 인스턴스 생성
   const markerImage = new kakao.maps.MarkerImage(
@@ -56,7 +56,7 @@ function Location() {
   );
 
   //위치 인스턴스 생성
-  const markerPosition = Info[Index].latlng;
+  const markerPosition = info[index].latlng;
 
   //위치 인스턴스 값을 인수로 해서 마커 인스턴스 생성
   const marker = new kakao.maps.Marker({
@@ -70,7 +70,7 @@ function Location() {
     //지도 인스턴스 생성
     const map_instance = new kakao.maps.Map(conMap.current, option);
     const handleResize = () => {
-      map_instance.setCenter(Info[Index].latlng);
+      map_instance.setCenter(info[index].latlng);
     };
     //마커 출력
     marker.setMap(map_instance);
@@ -89,15 +89,15 @@ function Location() {
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
-  }, [Index]);
+  }, [index]);
 
   useEffect(() => {
-    if (Location) {
-      Traffic
-        ? Location.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC)
-        : Location.removeOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
+    if (location) {
+      traffic
+        ? location.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC)
+        : location.removeOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
     }
-  }, [Traffic]);
+  }, [traffic]);
 
   return (
     <Layout name={"Location"}>
@@ -145,14 +145,14 @@ function Location() {
           <div>
             <div id="map" ref={conMap}></div>
             <div className="btnSet">
-              <button onClick={() => setTraffic(!Traffic)}>
-                {Traffic ? "Traffic OFF" : "Traffic ON"}
+              <button onClick={() => setTraffic(!traffic)}>
+                {traffic ? "Traffic OFF" : "Traffic ON"}
               </button>
 
               <ul className="branch" ref={btns}>
-                {Info.map((info, idx) => {
+                {info.map((info, idx) => {
                   let on = "";
-                  Index === idx ? (on = "on") : (on = "");
+                  index === idx ? (on = "on") : (on = "");
                   return (
                     <li key={idx} onClick={() => setIndex(idx)} className={on}>
                       {info.title}

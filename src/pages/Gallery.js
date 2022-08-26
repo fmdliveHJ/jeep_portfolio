@@ -10,7 +10,7 @@ function Gallery() {
   const frame = useRef(null);
   const input = useRef(null);
   const pop = useRef(null);
-  const [Index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0);
   const [Loading, setLoading] = useState(true);
   const [EnableClick, setEnableClick] = useState(true);
   //Opt값에 처음 api인수로 전달될 값으로 초기화
@@ -130,8 +130,8 @@ function Gallery() {
       <Popup ref={pop}>
         {gallery.length !== 0 && (
           <img
-            src={`https://live.staticflickr.com/${gallery[Index].server}/${gallery[Index].id}_${gallery[Index].secret}_b.jpg`}
-            alt={gallery[Index].title}
+            src={`https://live.staticflickr.com/${gallery[index].server}/${gallery[index].id}_${gallery[index].secret}_b.jpg`}
+            alt={gallery[index].title}
           />
         )}
       </Popup>
