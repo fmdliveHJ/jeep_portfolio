@@ -11,8 +11,8 @@ function Gallery() {
   const input = useRef(null);
   const pop = useRef(null);
   const [index, setIndex] = useState(0);
-  const [Loading, setLoading] = useState(true);
-  const [EnableClick, setEnableClick] = useState(true);
+  const [loading, setLoading] = useState(true);
+  const [enableClick, setEnableClick] = useState(true);
   //Opt값에 처음 api인수로 전달될 값으로 초기화
   const [Opt, setOpt] = useState(null);
   const masonryOptions = { transitionDuration: "0.5s" };
@@ -27,7 +27,7 @@ function Gallery() {
   };
 
   const showSearch = () => {
-    if (!EnableClick) return;
+    if (!enableClick) return;
     const tag = input.current.value.trim();
     input.current.value = "";
     if (!tag) return alert("검색어를 입력하세요");
@@ -46,7 +46,7 @@ function Gallery() {
   return (
     <>
       <Layout name={"Flickr"}>
-        {Loading && (
+        {loading && (
           <div className="loading">
             <div className="cloud">
               <p>Loading...</p>

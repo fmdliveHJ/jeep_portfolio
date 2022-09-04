@@ -32,7 +32,7 @@ function Community() {
   };
 
   const [posts, setPosts] = useState(getLocalData());
-  const [Allowed, setAllowed] = useState(true);
+  const [allowed, setAllowed] = useState(true);
 
   //글 초기화  함수
   const resetPost = () => {
@@ -85,7 +85,7 @@ function Community() {
 
   //글 수정모드 변경함수
   const enableUpdate = (index) => {
-    if (!Allowed) return;
+    if (!allowed) return;
     setAllowed(false);
     setPosts(
       posts.map((post, idx) => {
